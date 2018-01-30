@@ -2,7 +2,7 @@
 title: 
 ---
 
-# Linux Command
+# 常用 Command
 
 ```
 1.nohup  后台启动应用
