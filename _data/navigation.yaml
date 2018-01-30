@@ -1,0 +1,40 @@
+{
+  "logo": {
+    "text": "Rtime Doc",
+    "type": "link",
+    "path": "index.html"
+  },
+  "main": [
+    {
+      "text": "Linux",
+      "type": "label"
+    },
+    {
+      "text": "Command",
+      "type": "link",
+      "path": "linux_command/index.html",
+      "children": 
+      [{
+        "text": "Vi/Vim",
+        "type": "link",
+        "path": "linux_command/vi/index.html"
+      }]
+    },
+    {
+      "text": "install software",
+      "type": "link",
+      "path": "linux_software/index.html",
+      "children":
+      [{
+        "text": "jdk",
+        "type": "link",
+        "path": "linux_software/jdk/index.html"
+      }]
+    },
+    {
+      "text": "My Github",
+      "type": "link",
+      "path": "https://github.com/NightAlexLy"
+    }
+  ]
+}
