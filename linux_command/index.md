@@ -1,5 +1,5 @@
 ---
-title: Common Linux Command
+title: 
 ---
 
 # Linux Command
