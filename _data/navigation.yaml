@@ -17,7 +17,7 @@
       [{
         "text": "Vi/Vim",
         "type": "link",
-        "path": "linux_command/vi/index.html"
+        "path": "linux_command/vi.html"
       }]
     },
     {
@@ -28,7 +28,7 @@
       [{
         "text": "jdk",
         "type": "link",
-        "path": "linux_software/jdk/index.html"
+        "path": "linux_software/jdk.html"
       }]
     },
     {
