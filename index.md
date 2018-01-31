@@ -26,6 +26,7 @@ title:
   - tomcat
   - zookeeper
   - metaq
+  - redis
   - activemq
   - nginx
   - haproxy

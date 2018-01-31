@@ -6,7 +6,7 @@ title:
  
  　　1. 请先安装[jdk](/linux_software/jdk.html)环境
  　　2.  Zookeeper采用集群部署的方式
- 　　3.  默认使用root用户安装，部署过程会添加zookeeper用户
+ 　　3.  默认使用**root**用户安装，部署过程会添加zookeeper用户
 
  
 a. 改变操作系统语言环境

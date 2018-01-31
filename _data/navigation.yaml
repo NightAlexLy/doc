@@ -29,6 +29,30 @@
         "text": "jdk",
         "type": "link",
         "path": "linux_software/jdk.html"
+      },{
+        "text": "tomcat",
+        "type": "link",
+        "path": "linux_software/tomcat.html"
+      },{
+        "text": "zookeeper",
+        "type": "link",
+        "path": "linux_software/zookeeper.html"
+      },{
+        "text": "metaq",
+        "type": "link",
+        "path": "linux_software/metaq.html"
+      },{
+        "text": "redis",
+        "type": "link",
+        "path": "linux_software/redis.html"
+      },{
+        "text": "vsftpd",
+        "type": "link",
+        "path": "linux_software/ftp.html"
+      },{
+        "text": "sftp",
+        "type": "link",
+        "path": "linux_software/sftp.html"
       }]
     },
     {

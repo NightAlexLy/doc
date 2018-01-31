@@ -4,71 +4,143 @@ title:
  
  **特别说明**
  
- 　　1.  JDK的版本：**jdk-7u79-linux-x64.tar.gz**
- 　　2.  安装路径：**/opt/java**
- 　　3.  安装用户：**root**
+ 　　1.  vsftpd的版本：**vsftpd-2.2.2-14.el6.x86_64.rpm**
+ 　　2.  安装用户：**root**
  
-a. 检查系统自带的jdk版本
+a. 关闭防火墙
 
 ```
-　　[root@hostname ~]# java -version
-　　[root@hostname ~]# rpm -qa | grep java
+　　[root@hostname ~]# service iptables stop
+检查selinux是否关闭
+　　[root@hostname ~]# getenforce
+如果返回的不是Disabled，执行以下命令：
+　　[root@hostname ~]# setenforce 0
 ```
 
-b. 卸载自带的JDK的信息[没有自带JDK可不执行]
+b. 安装vsftpd服务
 
 ```
-　　[root@hostname ~]# rpm -e java-1.7.0-openjdk-1.7.0.79-2.5.5.4.el6.x86_64
-　　[root@hostname ~]# rpm -e java-1.6.0-openjdk-1.6.0.35-1.13.7.1.el6_6.x86_64
+　　[root@hostname ~]# yum -y install vsftpd
+当yum不成功的时候，可以通过
+　　[root@hostname ~]# rpm -ivh vsftpd-2.2.2-14.el6.x86_64.rpm
 ```
 
-c. tar.gz包安装
+c. 基础配置
 
 ```
-进入/opt目录
-　　[root@hostname ~]# cd /opt/
-解压安装包
-　　[root@hostname ~]# tar -zxf jdk-7u79-linux-x64.tar.gz -C /opt
-　　[root@hostname ~]# cd /opt
-对解压的目录重命名
-　　[root@hostname ~]# mv jdk1.7.0_79 jdk
-改变/opt/jdk的目录权限
-　　[root@hostname ~]# chown -R root.root /opt/jdk
-　　[root@hostname ~]# ls -ld /opt/jdk
+　　[root@hostname ~]# vi /etc/vsftpd/vsftpd.conf
+修改值如下：
+　　anonymous_enable=NO
+　　pam_service_name=vsftpd.vu
+末尾添加：
+　　guest_enable=YES
+　　guest_username=virtual
+　　user_config_dir=/etc/vsftpd/user_conf
+
+
+　　[root@hostname ~]# touch   /etc/pam.d/vsftpd.vu
+　　[root@hostname ~]# vi  /etc/pam.d/vsftpd.vu
+添加内容如下：
+　　　　auth       required  pam_userdb.so db=/etc/vsftpd/vsftpd_login
+　　　　account  required  pam_userdb.so db=/etc/vsftpd/vsftpd_login
+添加虚拟用户文件：
+　　[root@hostname ~]# touch /etc/vsftpd/vsftpd_login.txt
+　　[root@hostname ~]# vi /etc/vsftpd/vsftpd_login.txt
+添加如下内容：
+　　user1
+　　password1
+　　user2
+　　password2
+　　user3
+　　password3
+　　user4
+　　password4
+　　user5
+　　password5
+建立访问者数据文件（如果没有可以安装：yum install db4-utils）
+　　[root@hostname ~]# db_load -T -t hash -f /etc/vsftpd/vsftpd_login.txt /etc/vsftpd/vsftpd_login.db
+建立虚拟用户
+　　[root@hostname ~]# useradd -d /home/ftp -s /sbin/nologin virtual
+创建目录并赋予权限
+　　[root@hostname ~]# mkdir -p /ftp/user1
+　　[root@hostname ~]# mkdir -p /ftp/user2
+　　[root@hostname ~]# mkdir -p /ftp/user3
+　　[root@hostname ~]# mkdir -p /ftp/user4
+　　[root@hostname ~]# mkdir -p /ftp/user5
+　　[root@hostname ~]# chown -R virtual:virtual /ftp/user1
+　　[root@hostname ~]# chown -R virtual:virtual /ftp/user2
+　　[root@hostname ~]# chown -R virtual:virtual /ftp/user3
+　　[root@hostname ~]# chown -R virtual:virtual /ftp/user4
+　　[root@hostname ~]# chown -R virtual:virtual /ftp/user5
+创建用户配置文件目录并创建对应角色配置文件
+　　[root@hostname ~]# mkdir /etc/vsftpd/user_conf
+　　[root@hostname ~]# touch /etc/vsftpd/user_conf/user1
+　　[root@hostname ~]# touch /etc/vsftpd/user_conf/user2
+　　[root@hostname ~]# touch /etc/vsftpd/user_conf/user3
+　　[root@hostname ~]# touch /etc/vsftpd/user_conf/user4
+　　[root@hostname ~]# touch /etc/vsftpd/user_conf/user5
+添加配置：
+　　[root@hostname ~]# vi /etc/vsftpd/user_conf/user1
+添加如下内容：
+　　local_root=/ftp/user1
+　　anon_world_readable_only=NO
+　　write_enable=YES
+　　anon_upload_enable=YES
+　　anon_mkdir_write_enable=YES
+　　anon_other_write_enable=YES
+
+添加配置：
+　　[root@hostname ~]# vi /etc/vsftpd/user_conf/user2
+添加如下内容：
+　　local_root=/ftp/user2
+　　anon_world_readable_only=NO
+　　write_enable=YES
+　　anon_upload_enable=YES
+　　anon_mkdir_write_enable=YES
+　　anon_other_write_enable=YES
+
+添加配置：
+　　[root@hostname ~]# vi /etc/vsftpd/user_conf/user3
+添加如下内容：
+　　local_root=/ftp/user3
+　　anon_world_readable_only=NO
+　　write_enable=YES
+　　anon_upload_enable=YES
+　　anon_mkdir_write_enable=YES
+　　anon_other_write_enable=YES
+
+添加配置：
+　　[root@hostname ~]# vi /etc/vsftpd/user_conf/user4
+添加如下内容：
+　　local_root=/ftp/user4
+　　anon_world_readable_only=NO
+　　write_enable=YES
+　　anon_upload_enable=YES
+　　anon_mkdir_write_enable=YES
+　　anon_other_write_enable=YES
+
+添加配置：
+　　[root@hostname ~]# vi /etc/vsftpd/user_conf/user5
+添加如下内容：
+　　local_root=/ftp/user5
+　　anon_world_readable_only=NO
+　　write_enable=YES
+　　anon_upload_enable=YES
+　　anon_mkdir_write_enable=YES
+　　anon_other_write_enable=YES
 ```
 
-d. 配置环境变量,在/etc/profile文件下添加
+d. 启动服务
 
 ```
-　　[root@hostname ~]# cp -a /etc/profile /etc/profile.ori
-　　[root@hostname ~]# ll /etc/profile*
- 
-　　[root@hostname ~]# echo 'export JAVA_HOME=/opt/jdk' >>  /etc/profile
-　　[root@hostname ~]# echo 'export CLASSPATH=$JAVA_HOME/lib' >>  /etc/profile
-　　[root@hostname ~]# echo 'export PATH=$JAVA_HOME/bin:$PATH' >>  /etc/profile
+　　[root@hostname ~]# service vsftpd start  #启动
+　　[root@hostname ~]# service vsftpd stop  #停止
+　　[root@hostname ~]# service vsftpd status  #运行状态
 ```
 
-e. 执行环境变量
+e. 验证服务
 
 ```
-　　[root@hostname ~]# source /etc/profile
+　　[root@hostname ~]# yum install -y lftp
+　　[root@hostname ~]# ftp xxx.xxx.xxx.xxx  搭建ftp的服务器ip
 ```
-
-f. 查看设置的环境变量
-
-```
-　　[root@hostname ~]# echo $PATH
-　　[root@hostname ~]# echo $CLASSPATH
-　　[root@hostname ~]# echo $JAVA_HOME
-```
-
-g. 查看java版本
-
-```
-　　[root@hostname ~]# java -version
-```
-
-
-
-
-
