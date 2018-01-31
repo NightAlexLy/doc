@@ -27,10 +27,7 @@ c. tar.gz包安装
 ```
 进入/opt目录
 　　[root@hostname ~]# cd /opt/
-下载安装包
-　　[root@hostname ~]# wget http://ore2d9chp.bkt.clouddn.com/jdk-7u79-linux-x64.tar.gz
 解压安装包
-
 　　[root@hostname ~]# tar -zxf jdk-7u79-linux-x64.tar.gz -C /opt
 　　[root@hostname ~]# cd /opt
 对解压的目录重命名
