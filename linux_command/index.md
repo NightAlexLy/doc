@@ -86,4 +86,5 @@ title:
 67. find *.sh | xargs grep -F "bin" --color=auto     查看指定内容并标记显示
 68. ps -ef --sort -pcpu | head   查看CPU占用率最高的进程
 69. cat /proc/cpuinfo | sed -n 5p     获得处理器名称
+70. du -skh filename   查看文件大小  单位：M
 ```             

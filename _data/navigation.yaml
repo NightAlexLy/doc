@@ -49,6 +49,21 @@
       }]
     },
     {
+      "text": "shell",
+      "type": "link",
+      "path": "linux_shell/index.html",
+      "children":
+      [{
+        "text": "hexo-cmd",
+        "type": "link",
+        "path": "linux_shell/hexo-cmd.html"
+      },{
+        "text": "统计nginx错误code",
+        "type": "link",
+        "path": "linux_shell/nginx-error.html"
+      }]
+    },
+    {
       "text": "install software",
       "type": "link",
       "path": "linux_software/index.html",
