@@ -18,6 +18,10 @@
         "text": "Vi/Vim",
         "type": "link",
         "path": "linux_command/vi.html"
+      },{
+        "text": "Compress",
+        "type": "link",
+        "path": "linux_command/compress.html"
       }]
     },
     {
