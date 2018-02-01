@@ -22,6 +22,30 @@
         "text": "Compress",
         "type": "link",
         "path": "linux_command/compress.html"
+      },{
+        "text": "File",
+        "type": "link",
+        "path": "linux_command/file.html"
+      },{
+        "text": "Jurisdiction",
+        "type": "link",
+        "path": "linux_command/jurisdiction.html"
+      },{
+        "text": "Network",
+        "type": "link",
+        "path": "linux_command/network.html"
+      },{
+        "text": "Search",
+        "type": "link",
+        "path": "linux_command/search.html"
+      },{
+        "text": "Shutdown",
+        "type": "link",
+        "path": "linux_command/shutdown.html"
+      },{
+        "text": "Help",
+        "type": "link",
+        "path": "linux_command/help.html"
       }]
     },
     {
