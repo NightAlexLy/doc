@@ -1,5 +1,5 @@
 ---
-title: hexo-cmd Shell
+title: hexo-deploy Shell
 ---
 
 **定时自动部署和更新hexo**
@@ -59,9 +59,9 @@ function autoDeploy()
 /usr/bin/expect <<-EOF
   spawn hexo deploy
   expect "Username"
-  send "night_ly@live.com\r"
+  send "$gitUn\r"
   expect "Password"
-  send "liuyang1\r"
+  send "$gitPwd\r"
   interact
   expect eof
 EOF
