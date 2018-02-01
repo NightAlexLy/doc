@@ -58,9 +58,13 @@
         "type": "link",
         "path": "linux_shell/hexo-cmd.html"
       },{
-        "text": "统计nginx错误code",
+        "text": "nginx code analysis",
         "type": "link",
         "path": "linux_shell/nginx-error.html"
+      },{
+        "text": "system monitor",
+        "type": "link",
+        "path": "linux_shell/system-monitor.html"
       }]
     },
     {
