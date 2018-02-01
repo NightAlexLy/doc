@@ -11,7 +11,7 @@ Linux下：
 　　usr-user 用户
 　　sbin- super binary 超级用户
 	
-### 文件处理命令：
+文件处理命令：
 　　ls[显示文件信息]、
 　　cd[切换目录]、
 　　pwd[显示目录位置]、

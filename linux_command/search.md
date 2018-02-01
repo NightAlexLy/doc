@@ -4,12 +4,12 @@ title:
 
 **Linux 关于文件搜索命令。**
 
-### 文件搜索命令：
-　　　　which[显示系统命令所在目录]、
-　　　　find[查找文件或目录]、
-　　　　locate[寻找文件或目录]、
-　　　　updatedb[建立整个系统目录文件的数据库]
-　　　　grep[在文件中搜寻字符串匹配的行并输出]
+文件搜索命令：
+　　which[显示系统命令所在目录]、
+　　find[查找文件或目录]、
+　　locate[寻找文件或目录]、
+　　updatedb[建立整个系统目录文件的数据库]
+　　grep[在文件中搜寻字符串匹配的行并输出]
 
 
 命令名称：**which**   命令所在路径：**/usr/bin/which**   执行权限：所有用户
@@ -52,14 +52,11 @@ alias ls='ls --color=auto'
 　　　　　　　　　-之内  +超过
 　　　　　　　　　-type 文件类型  f 二进制文件  l软链接文件  d目录
 　　　　　　　　　-inum  i节点
-```	
+```
 
 1. 连接符  -a   and  逻辑与  -o  or 逻辑或
 2. 连接符  find  ...  -exec 命令 {}\;   {}表示find查询的结果    \ 转义符,符号命令使用本身的含义 ;结果.
 　　　　　　　　　　　-ok  （询问确认）
-
-
-
 
 命令名称：**locate**   指令英文原意： **list files in databases**
 指定所在路径：**/usr/bin/locate**  执行权限：所有用户  
