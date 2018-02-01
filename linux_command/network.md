@@ -32,7 +32,7 @@ title:
 
 命令名称：**ifconfig**    命令所在路径：**/usr/sbin/ifconfig**   执行权限：root
 语法：ifconfig  选项[-a] [网卡设备]
-　　　　　　　　　　-a  显示所有网卡
+　　　　　　　　　-a  显示所有网卡
 功能描述：查看网络设置信息
 ```
 范例：#ifconfig -a

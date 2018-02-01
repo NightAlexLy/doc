@@ -1,8 +1,8 @@
 ---
-title: 
+title: Common Command
 ---
 
-# 常用 Command
+# Common Command
 
 ```
 1.nohup  后台启动应用
