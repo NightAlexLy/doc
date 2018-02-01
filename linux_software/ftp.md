@@ -22,6 +22,8 @@ b. 安装vsftpd服务
 ```
 　　[root@hostname ~]# yum -y install vsftpd
 当yum不成功的时候，可以通过
+　　[root@hostname ~]# cp /opt
+　　[root@hostname ~]# wget http://ore2d9chp.bkt.clouddn.com/vsftpd-2.2.2-14.el6.x86_64.rpm
 　　[root@hostname ~]# rpm -ivh vsftpd-2.2.2-14.el6.x86_64.rpm
 ```
 
