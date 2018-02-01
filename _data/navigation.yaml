@@ -58,6 +58,10 @@
         "type": "link",
         "path": "linux_shell/hexo-cmd.html"
       },{
+        "text": "hexo-deploy",
+        "type": "link",
+        "path": "linux_shell/hexo-deploy.html"
+      },{
         "text": "nginx code analysis",
         "type": "link",
         "path": "linux_shell/nginx-error.html"
