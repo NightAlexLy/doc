@@ -67,13 +67,7 @@
     {
         "text": "issue",
         "type": "link",
-        "path": "git/issue.html",
-        "children":
-        [{
-          "text": "init git project",
-          "type": "link",
-          "path": "git/issue.html#111"
-        }]
+        "path": "git/issue.html"
     },
     {
       "text": "My Github",

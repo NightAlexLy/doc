@@ -2,7 +2,7 @@
 title: 
 ---
 
-### Linux下初始化Git项目并提交GitHub
+## linux init git project
 
 - GitHub上创建一个repositories项目,比如 ：https://github.com/NightAlexLy/doc.git
 - 在自已的项目下面执行。 `git init`
