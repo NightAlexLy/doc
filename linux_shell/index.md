@@ -1,7 +1,6 @@
 ---
-title: 
+title: Linux Shell
 ---
-
 
 #linux shell#
 

@@ -1,5 +1,5 @@
 ---
-title: 
+title: Nginx Code Shell
 ---
 
 **统计Nginx错误Code数量**

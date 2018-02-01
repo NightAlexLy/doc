@@ -1,5 +1,5 @@
 ---
-title: 
+title: Nginx Install
 ---
  
  **特别说明**

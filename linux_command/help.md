@@ -1,5 +1,5 @@
 ---
-title: 
+title: Help Command
 ---
 
 **Linux 关于帮助命令。**

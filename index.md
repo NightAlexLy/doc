@@ -1,5 +1,5 @@
 ---
-title: 
+title: my Doc
 ---
  
 #Hi MyDoc#
@@ -9,6 +9,8 @@ title:
 - 2018-01-22 搭建doc
 - 2018-01-29 添加linux章节
 - 2018-01-29 添加linux install software章节
+- 2018-02-01 添加linux shell 章节
+- 2018-02-01 添加git章节
 
 ** 未完成的事件 **
 
@@ -36,7 +38,6 @@ title:
   - ftp
   - sftp
   - taokeeper
-  - cachecloud
 - linux shell 编写(语法)
 - 架构图
 - 技术进阶

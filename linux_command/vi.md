@@ -1,5 +1,5 @@
 ---
-title: 
+title: Vi/Vim Command
 ---
 
 **Vim/Vi是一个功能强大的全屏幕文本编辑器,是Linux/UNIX上最常用的文本编辑器,它的作用是建立、编辑、显示文本文件。**

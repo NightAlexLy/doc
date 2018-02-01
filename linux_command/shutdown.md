@@ -1,5 +1,5 @@
 ---
-title: 
+title: Shutdown Command
 ---
 
 **Linux 关于重启和关机命令。**

@@ -1,5 +1,5 @@
 ---
-title: 
+title: Search Command
 ---
 
 **Linux 关于文件搜索命令。**

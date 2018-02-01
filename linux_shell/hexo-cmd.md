@@ -1,5 +1,5 @@
 ---
-title: 
+title: hexo-cmd Shell
 ---
 
 **自已编写对于hexo管理的脚本**

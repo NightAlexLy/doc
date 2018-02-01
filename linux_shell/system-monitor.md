@@ -1,5 +1,5 @@
 ---
-title: 
+title: System Monitor Shell
 ---
 
 **系统信息监控脚本**

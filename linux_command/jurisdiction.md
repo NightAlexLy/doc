@@ -1,5 +1,5 @@
 ---
-title: 
+title: Jurisdiction Command
 ---
 
 **Linux 关于权限处理命令。**
