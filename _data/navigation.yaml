@@ -12,98 +12,98 @@
     {
       "text": "Command",
       "type": "link",
-      "path": "linux_command/index.html",
+      "path": "linux/command/index.html",
       "children": 
       [{
         "text": "Vi/Vim",
         "type": "link",
-        "path": "linux_command/vi.html"
+        "path": "linux/command/vi.html"
       },{
         "text": "Compress",
         "type": "link",
-        "path": "linux_command/compress.html"
+        "path": "linux/command/compress.html"
       },{
         "text": "File",
         "type": "link",
-        "path": "linux_command/file.html"
+        "path": "linux/command/file.html"
       },{
         "text": "Jurisdiction",
         "type": "link",
-        "path": "linux_command/jurisdiction.html"
+        "path": "linux/command/jurisdiction.html"
       },{
         "text": "Network",
         "type": "link",
-        "path": "linux_command/network.html"
+        "path": "linux/command/network.html"
       },{
         "text": "Search",
         "type": "link",
-        "path": "linux_command/search.html"
+        "path": "linux/command/search.html"
       },{
         "text": "Shutdown",
         "type": "link",
-        "path": "linux_command/shutdown.html"
+        "path": "linux/command/shutdown.html"
       },{
         "text": "Help",
         "type": "link",
-        "path": "linux_command/help.html"
+        "path": "linux/command/help.html"
       }]
     },
     {
       "text": "shell",
       "type": "link",
-      "path": "linux_shell/index.html",
+      "path": "linux/shell/index.html",
       "children":
       [{
         "text": "hexo-cmd",
         "type": "link",
-        "path": "linux_shell/hexo-cmd.html"
+        "path": "linux/shell/hexo-cmd.html"
       },{
         "text": "hexo-deploy",
         "type": "link",
-        "path": "linux_shell/hexo-deploy.html"
+        "path": "linux/shell/hexo-deploy.html"
       },{
         "text": "nginx code analysis",
         "type": "link",
-        "path": "linux_shell/nginx-error.html"
+        "path": "linux/shell/nginx-error.html"
       },{
         "text": "system monitor",
         "type": "link",
-        "path": "linux_shell/system-monitor.html"
+        "path": "linux/shell/system-monitor.html"
       }]
     },
     {
       "text": "install software",
       "type": "link",
-      "path": "linux_software/index.html",
+      "path": "linux/software/index.html",
       "children":
       [{
         "text": "jdk",
         "type": "link",
-        "path": "linux_software/jdk.html"
+        "path": "linux/software/jdk.html"
       },{
         "text": "tomcat",
         "type": "link",
-        "path": "linux_software/tomcat.html"
+        "path": "linux/software/tomcat.html"
       },{
         "text": "zookeeper",
         "type": "link",
-        "path": "linux_software/zookeeper.html"
+        "path": "linux/software/zookeeper.html"
       },{
         "text": "metaq",
         "type": "link",
-        "path": "linux_software/metaq.html"
+        "path": "linux/software/metaq.html"
       },{
         "text": "redis",
         "type": "link",
-        "path": "linux_software/redis.html"
+        "path": "linux/software/redis.html"
       },{
         "text": "vsftpd",
         "type": "link",
-        "path": "linux_software/ftp.html"
+        "path": "linux/software/ftp.html"
       },{
         "text": "sftp",
         "type": "link",
-        "path": "linux_software/sftp.html"
+        "path": "linux/software/sftp.html"
       }]
     },
     {
@@ -119,6 +119,25 @@
         "text": "issue",
         "type": "link",
         "path": "git/issue.html"
+    },
+    {
+      "text": "Mysql",
+      "type": "label"
+    },
+    {
+      "text": "Command",
+      "type": "link",
+      "path": "mysql/index.html"
+    },
+    {
+        "text": "issue",
+        "type": "link",
+        "path": "mysql/issue.html"
+    },
+    {
+        "text": "conf",
+        "type": "link",
+        "path": "mysql/conf.html"
     },
     {
       "text": "My Github",
