@@ -2,7 +2,7 @@
 title: Maven Install
 ---
 
-**Maven 是项目构建工具，y用来管理项目的依赖以及构建**等。**
+**Maven 是项目管理工具，用来处理项目的依赖以及构建等。**
  　　1.  Subversion版本：3.5.2
  　　2.  安装方式：tar.gz
  　　3.  安装用户：**root**
@@ -11,8 +11,8 @@ a. 下载Maven并解压
 
 ```
 	[root@hostname ~]# cd /opt
-　　[root@hostname ~]# wget http://mirrors.hust.edu.cn/apache/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz
-　　[root@hostname ~]# tar -zxvf apache-maven-3.5.2-bin.tar.gz
+	[root@hostname ~]# wget http://mirrors.hust.edu.cn/apache/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz
+	[root@hostname ~]# tar -zxvf apache-maven-3.5.2-bin.tar.gz
 	[root@hostname ~]# mv apache-maven-3.5.2-bin maven
 ```
 
