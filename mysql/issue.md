@@ -3,15 +3,13 @@ title: Mysql Issue
 ---
 
 ## 修改端口号
-
 　　查看编码：
 　　　　show global variables like 'port';
 　　编辑mysql配置文件
 　　　　--在 [mysqld] 标签下加上以下内容：
-　　　　port=xxxx
+　　　　port=xxxx  [端口号]
 
 ## 设置数据库编码
-
 　　查看编码：
 　　　　show variables like "%character%";
 
@@ -41,5 +39,4 @@ title: Mysql Issue
 　　　　set collation_server = utf8_general_ci;
 
 ## 默认配置文件路径
-　　
-　　默认为/etc/my.cnf。 Linux Debian系统为/etc/mysql/my.cnf
+　　默认为**/etc/my.cnf**。 Linux Debian系统为**/etc/mysql/my.cnf**

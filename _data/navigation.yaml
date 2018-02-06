@@ -130,14 +130,23 @@
       "path": "mysql/index.html"
     },
     {
+        "text": "conf",
+        "type": "link",
+        "path": "mysql/conf.html"
+    },
+    {
         "text": "issue",
         "type": "link",
         "path": "mysql/issue.html"
     },
     {
-        "text": "conf",
-        "type": "link",
-        "path": "mysql/conf.html"
+      "text": "Tools",
+      "type": "label"
+    },
+    {
+      "text": "Sublime Text",
+      "type": "link",
+      "path": "tools/sublimetext.html"
     },
     {
       "text": "My Github",

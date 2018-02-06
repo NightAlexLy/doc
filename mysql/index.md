@@ -31,7 +31,7 @@ alter database 数据库名 character set utf8;
 ```
 grant all privileges on 数据库.* to '用户名'@'%';
 ```
-
+	
 **刷新MySQL的系统权限相关表**
 ```
 flush privileges;
