@@ -104,6 +104,14 @@
         "text": "sftp",
         "type": "link",
         "path": "linux/software/sftp.html"
+      },{
+        "text": "subversion",
+        "type": "link",
+        "path": "linux/software/subversion.html"
+      },{
+        "text": "maven",
+        "type": "link",
+        "path": "linux/software/maven.html"
       }]
     },
     {
