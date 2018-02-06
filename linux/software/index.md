@@ -12,3 +12,5 @@ title: Linux Software Install
 - [redis](redis.html)
 - [vsftpd](ftp.html)
 - [sftp](sftp.html)
+- [subversion](subversion.html)
+- [maven](maven.html)
