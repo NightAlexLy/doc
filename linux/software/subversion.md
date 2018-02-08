@@ -68,7 +68,7 @@ d. 启动svn-server
 　　[root@hostname ~]# svnserve -d -r /opt/svn/repos
 ```
 
-e. 校验svn-server
+e. 校验svn-server 
 
 ```
 　　[root@hostname ~]# svn list svn://xxx.xxx.xxx.xxx/

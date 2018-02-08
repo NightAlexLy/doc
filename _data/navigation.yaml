@@ -112,6 +112,10 @@
         "text": "maven",
         "type": "link",
         "path": "linux/software/maven.html"
+      },{
+        "text": "other",
+        "type": "link",
+        "path": "linux/software/other.html"
       }]
     },
     {

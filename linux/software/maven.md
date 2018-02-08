@@ -3,6 +3,7 @@ title: Maven Install
 ---
 
 **Maven 是项目管理工具，用来处理项目的依赖以及构建等。**
+ 
  　　1.  Subversion版本：3.5.2
  　　2.  安装方式：tar.gz
  　　3.  安装用户：**root**

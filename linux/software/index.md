@@ -14,3 +14,4 @@ title: Linux Software Install
 - [sftp](sftp.html)
 - [subversion](subversion.html)
 - [maven](maven.html)
+- [other](other.html)
