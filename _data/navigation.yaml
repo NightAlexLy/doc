@@ -119,6 +119,25 @@
       }]
     },
     {
+      "text": "NodeJs",
+      "type": "label"
+    },
+    {
+      "text": "Script",
+      "type": "link",
+      "path": "nodejs/script/index.html",
+      "children":
+      [{
+        "text": "i5ting_toc",
+        "type": "link",
+        "path": "nodejs/script/i5ting_toc.html"
+      },{
+        "text": "gulp",
+        "type": "link",
+        "path": "nodejs/script/gulp.html"
+      }]
+    },
+    {
       "text": "Git",
       "type": "label"
     },

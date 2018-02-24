@@ -24,7 +24,7 @@ title: my Doc
   - file ( √ )
   - yum
   - network ( √ )
-  - ps
+  - ps  ( √ )
   - chmod  ( √ )
 - linux install software
   - tomcat ( √ )
