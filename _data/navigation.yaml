@@ -119,6 +119,11 @@
       }]
     },
     {
+      "text": "issue",
+      "type": "link",
+      "path": "linux/issue.html"
+    },
+    {
       "text": "NodeJs",
       "type": "label"
     },

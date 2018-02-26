@@ -11,3 +11,13 @@ title: Git Issue
 - `git remote add origin https://github.com/NightAlexLy/doc.git`，在github上面添加origin
 - `git push -u origin master`  ,将代码同步至github。
 - 上面一步报错可能需要执行`git pull --rebase origin`
+
+## git提交每次都输入密码
+
+```
+　　查看git origin的地址：  git remote -v
+
+　　1) git remote rm origin
+　　2) git remote add origin https://username:password@github.com/username/test.git
+　　3) git push origin master
+```
