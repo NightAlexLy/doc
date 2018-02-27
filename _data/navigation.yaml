@@ -148,15 +148,15 @@
       "path": "language/index.html",
     "children": 
       [{
-        "text": "Java",
-        "type": "link",
-        "path": "language/java/index.html"
+      "text": "Java",
+      "type": "link",
+      "path": "language/java/index.html"
       },{
-        "text": "NodeJS",
-        "type": "link",
-        "path": "language/nodejs/index.html",
-    "children": 
-      [{
+      "text": "NodeJS",
+      "type": "link",
+      "path": "language/nodejs/index.html",
+      "children": 
+        [{
         "text": "Script",
         "type": "link",
         "path": "language/nodejs/script/index.html",
@@ -170,46 +170,46 @@
           "type": "link",
           "path": "language/nodejs/script/gulp.html"
           }]
-      }]
+        }]
     },{
-        "text": "Android",
-        "type": "link",
-        "path": "language/android/index.html",
-    "children": 
-      [{
+      "text": "Android",
+      "type": "link",
+      "path": "language/android/index.html",
+      "children": 
+        [{
         "text": "Basic",
         "type": "link",
         "path": "language/android/basic.html"
-       },{
+         },{
         "text": "Issue",
         "type": "link",
         "path": "language/android/issue.html"
-       }]
-    }
+         }]
+    }]
   },{
       "text": "DB",
       "type": "link",
       "path": "db/index.html",
     "children": 
       [{
-        "text": "Mysql",
-        "type": "link",
-        "path": "db/mysql/index.html",
+      "text": "Mysql",
+      "type": "link",
+      "path": "db/mysql/index.html",
     "children": 
     [{
       "text": "Command",
       "type": "link",
-      "path": "mysql/index.html"
+      "path": "db/mysql/index.html"
     },
     {
       "text": "conf",
       "type": "link",
-      "path": "mysql/conf.html"
+      "path": "db/mysql/conf.html"
     },
     {
       "text": "issue",
       "type": "link",
-      "path": "mysql/issue.html"
+      "path": "db/mysql/issue.html"
     }]
       }]
     },{
@@ -221,17 +221,17 @@
       "text": "Git",
       "type": "link",
       "path": "manager/git/index.html",
-      "children":[
+      "children":
+      [{
+        "text": "Command",
+        "type": "link",
+        "path": "manager/git/index.html"
+      },
       {
-      "text": "Command",
-      "type": "link",
-      "path": "manager/git/index.html"
-    },
-    {
-      "text": "issue",
-      "type": "link",
-      "path": "manager/git/issue.html"
-    }]
+        "text": "issue",
+        "type": "link",
+        "path": "manager/git/issue.html"
+      }]
     }]
     },{
       "text": "Tools",
@@ -239,9 +239,9 @@
       "path": "tools/index.html",
     "children": 
       [{
-        "text": "Sublime Text",
-        "type": "link",
-        "path": "tools/sublimetext.html"
+      "text": "Sublime Text",
+      "type": "link",
+      "path": "tools/sublimetext.html"
       }]
     },
     {
