@@ -39,97 +39,43 @@
       },{
       "text": "NodeJS",
       "type": "link",
-      "path": "language/nodejs/index.html",
-      "children": 
-        [{
-        "text": "Script",
-        "type": "link",
-        "path": "language/nodejs/script/index.html",
-        "children":
-          [{
-          "text": "i5ting_toc",
-          "type": "link",
-          "path": "language/nodejs/script/i5ting_toc.html"
-          },{
-          "text": "gulp",
-          "type": "link",
-          "path": "language/nodejs/script/gulp.html"
-          }]
-        }]
-    },{
+      "path": "language/nodejs/index.html"
+      },{
       "text": "Android",
       "type": "link",
-      "path": "language/android/index.html",
-      "children": 
-        [{
-        "text": "Basic",
-        "type": "link",
-        "path": "language/android/basic.html"
-         },{
-        "text": "Issue",
-        "type": "link",
-        "path": "language/android/issue.html"
-         }]
-    }]
+      "path": "language/android/index.html"
+      }]
   },{
       "text": "DB",
       "type": "link",
       "path": "db/index.html",
-    "children": 
-      [{
-      "text": "Mysql",
-      "type": "link",
-      "path": "db/mysql/index.html",
-    "children": 
-    [{
-      "text": "Command",
-      "type": "link",
-      "path": "db/mysql/index.html"
-    },
-    {
-      "text": "conf",
-      "type": "link",
-      "path": "db/mysql/conf.html"
-    },
-    {
-      "text": "issue",
-      "type": "link",
-      "path": "db/mysql/issue.html"
-    }]
-      }]
-    },{
+      "children": 
+        [{
+        "text": "Mysql",
+        "type": "link",
+        "path": "db/mysql/index.html"
+        }]
+  },{
       "text": "Manager",
       "type": "link",
       "path": "manager/index.html",
       "children": 
         [{
-      "text": "Git",
-      "type": "link",
-      "path": "manager/git/index.html",
-      "children":
-      [{
-        "text": "Command",
-        "type": "link",
-        "path": "manager/git/index.html"
-      },
-      {
-        "text": "issue",
-        "type": "link",
-        "path": "manager/git/issue.html"
-      }]
-    }]
-    },{
+          "text": "Git",
+          "type": "link",
+          "path": "manager/git/index.html"
+        }]
+  },{
       "text": "Tools",
       "type": "link",
       "path": "tools/index.html",
-    "children": 
-      [{
-      "text": "Sublime Text",
-      "type": "link",
-      "path": "tools/sublimetext.html"
-      }]
-    },
-    {
+      "children": 
+        [{
+          "text": "Sublime Text",
+          "type": "link",
+          "path": "tools/sublimetext.html"
+        }]
+  },{
       "text": "My Github",
       "type": "link",
       "path": "https://github.com/NightAlexLy"

@@ -2,7 +2,7 @@
 title: Git Command
 ---
 
-# Git常用命令
+## Git常用命令
 
 **git init**
 　　在本地新建一个repo,进入一个项目目录,执行git init,会初始化一个repo,并在当前文件夹下创建一个.git文件夹.
@@ -204,3 +204,26 @@ title: Git Command
 **特殊符号:**
 　　^代表父提交,当一个提交有多个父提交时,可以通过在^后面跟上一个数字,表示第几个父提交: ^相当于^1.
 　　~<n>相当于连续的<n>个^.
+
+
+## Issue
+
+### linux init git project
+
+- GitHub上创建一个repositories项目,比如 ：https://github.com/NightAlexLy/doc.git
+- 在自已的项目下面执行。 `git init`
+- 将资源文件添加到git。`git add . `
+- 提交 `git commit -m "log message`（自己的提交日志）"
+- `git remote add origin https://github.com/NightAlexLy/doc.git`，在github上面添加origin
+- `git push -u origin master`  ,将代码同步至github。
+- 上面一步报错可能需要执行`git pull --rebase origin`
+
+### git提交每次都输入密码
+
+```
+查看git origin的地址：  git remote -v
+
+　git remote rm origin
+　git remote add origin https://username:password@github.com/username/test.git
+　git push origin master
+```
