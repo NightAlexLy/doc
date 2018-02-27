@@ -21,128 +21,13 @@
       },{
         "text": "Linux",
         "type": "link",
-        "path": "system/linux/index.html",
-    "children":
-      [{
-        "text": "Command",
-        "type": "link",
-        "path": "system/linux/command/index.html",
-        "children": 
-        [{
-        "text": "Vi/Vim",
-        "type": "link",
-        "path": "system/linux/command/vi.html"
-        },{
-        "text": "Compress",
-        "type": "link",
-        "path": "system/linux/command/compress.html"
-        },{
-        "text": "File",
-        "type": "link",
-        "path": "system/linux/command/file.html"
-        },{
-        "text": "Jurisdiction",
-        "type": "link",
-        "path": "system/linux/command/jurisdiction.html"
-        },{
-        "text": "Network",
-        "type": "link",
-        "path": "system/linux/command/network.html"
-        },{
-        "text": "Search",
-        "type": "link",
-        "path": "system/linux/command/search.html"
-        },{
-        "text": "Shutdown",
-        "type": "link",
-        "path": "system/linux/command/shutdown.html"
-        },{
-        "text": "Help",
-        "type": "link",
-        "path": "system/linux/command/help.html"
-        }]
-      },
-      {
-        "text": "Shell",
-        "type": "link",
-        "path": "system/linux/shell/index.html",
-        "children":
-        [{
-        "text": "hexo-cmd",
-        "type": "link",
-        "path": "system/linux/shell/hexo-cmd.html"
-        },{
-        "text": "hexo-deploy",
-        "type": "link",
-        "path": "system/linux/shell/hexo-deploy.html"
-        },{
-        "text": "nginx code analysis",
-        "type": "link",
-        "path": "system/linux/shell/nginx-error.html"
-        },{
-        "text": "system monitor",
-        "type": "link",
-        "path": "system/linux/shell/system-monitor.html"
-        }]
-      },
-      {
-        "text": "Software",
-        "type": "link",
-        "path": "system/linux/software/index.html",
-        "children":
-        [{
-        "text": "jdk",
-        "type": "link",
-        "path": "system/linux/software/jdk.html"
-        },{
-        "text": "tomcat",
-        "type": "link",
-        "path": "system/linux/software/tomcat.html"
-        },{
-        "text": "zookeeper",
-        "type": "link",
-        "path": "system/linux/software/zookeeper.html"
-        },{
-        "text": "metaq",
-        "type": "link",
-        "path": "system/linux/software/metaq.html"
-        },{
-        "text": "redis",
-        "type": "link",
-        "path": "system/linux/software/redis.html"
-        },{
-        "text": "vsftpd",
-        "type": "link",
-        "path": "system/linux/software/ftp.html"
-        },{
-        "text": "sftp",
-        "type": "link",
-        "path": "system/linux/software/sftp.html"
-        },{
-        "text": "subversion",
-        "type": "link",
-        "path": "system/linux/software/subversion.html"
-        },{
-        "text": "maven",
-        "type": "link",
-        "path": "system/linux/software/maven.html"
-        },{
-        "text": "other",
-        "type": "link",
-        "path": "system/linux/software/other.html"
-        }]
-      },
-      {
-        "text": "issue",
-        "type": "link",
-        "path": "system/linux/issue.html"
-      }]
-    },{
+        "path": "system/linux/index.html"
+      },{
       "text": "Mac OS",
       "type": "link",
       "path": "system/macos/index.html"
-    }]
-  },{
+      }]
+   },{
       "text": "Language",
       "type": "link",
       "path": "language/index.html",
