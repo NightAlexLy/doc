@@ -15,9 +15,9 @@ title: Git Issue
 ## git提交每次都输入密码
 
 ```
-　　查看git origin的地址：  git remote -v
+查看git origin的地址：  git remote -v
 
-　　1) git remote rm origin
-　　2) git remote add origin https://username:password@github.com/username/test.git
-　　3) git push origin master
+　git remote rm origin
+　git remote add origin https://username:password@github.com/username/test.git
+　git push origin master
 ```

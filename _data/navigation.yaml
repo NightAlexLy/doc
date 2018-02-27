@@ -6,183 +6,244 @@
   },
   "main": [
     {
-      "text": "Linux",
+      "text": "IT",
       "type": "label"
     },
     {
-      "text": "Command",
+      "text": "System",
       "type": "link",
-      "path": "linux/command/index.html",
-      "children": 
+      "path": "system/index.html",
+    "children": 
       [{
+        "text": "Windows",
+        "type": "link",
+        "path": "system/windows/index.html"
+      },{
+        "text": "Linux",
+        "type": "link",
+        "path": "system/system/linux/index.html",
+    "children":
+      [{
+        "text": "Command",
+        "type": "link",
+        "path": "system/linux/command/index.html",
+        "children": 
+        [{
         "text": "Vi/Vim",
         "type": "link",
-        "path": "linux/command/vi.html"
-      },{
+        "path": "system/linux/command/vi.html"
+        },{
         "text": "Compress",
         "type": "link",
-        "path": "linux/command/compress.html"
-      },{
+        "path": "system/linux/command/compress.html"
+        },{
         "text": "File",
         "type": "link",
-        "path": "linux/command/file.html"
-      },{
+        "path": "system/linux/command/file.html"
+        },{
         "text": "Jurisdiction",
         "type": "link",
-        "path": "linux/command/jurisdiction.html"
-      },{
+        "path": "system/linux/command/jurisdiction.html"
+        },{
         "text": "Network",
         "type": "link",
-        "path": "linux/command/network.html"
-      },{
+        "path": "system/linux/command/network.html"
+        },{
         "text": "Search",
         "type": "link",
-        "path": "linux/command/search.html"
-      },{
+        "path": "system/linux/command/search.html"
+        },{
         "text": "Shutdown",
         "type": "link",
-        "path": "linux/command/shutdown.html"
-      },{
+        "path": "system/linux/command/shutdown.html"
+        },{
         "text": "Help",
         "type": "link",
-        "path": "linux/command/help.html"
-      }]
-    },
-    {
-      "text": "shell",
-      "type": "link",
-      "path": "linux/shell/index.html",
-      "children":
-      [{
+        "path": "system/linux/command/help.html"
+        }]
+      },
+      {
+        "text": "Shell",
+        "type": "link",
+        "path": "system/linux/shell/index.html",
+        "children":
+        [{
         "text": "hexo-cmd",
         "type": "link",
-        "path": "linux/shell/hexo-cmd.html"
-      },{
+        "path": "system/linux/shell/hexo-cmd.html"
+        },{
         "text": "hexo-deploy",
         "type": "link",
-        "path": "linux/shell/hexo-deploy.html"
-      },{
+        "path": "system/linux/shell/hexo-deploy.html"
+        },{
         "text": "nginx code analysis",
         "type": "link",
-        "path": "linux/shell/nginx-error.html"
-      },{
+        "path": "system/linux/shell/nginx-error.html"
+        },{
         "text": "system monitor",
         "type": "link",
-        "path": "linux/shell/system-monitor.html"
-      }]
-    },
-    {
-      "text": "install software",
-      "type": "link",
-      "path": "linux/software/index.html",
-      "children":
-      [{
+        "path": "system/linux/shell/system-monitor.html"
+        }]
+      },
+      {
+        "text": "Software",
+        "type": "link",
+        "path": "system/linux/software/index.html",
+        "children":
+        [{
         "text": "jdk",
         "type": "link",
-        "path": "linux/software/jdk.html"
-      },{
+        "path": "system/linux/software/jdk.html"
+        },{
         "text": "tomcat",
         "type": "link",
-        "path": "linux/software/tomcat.html"
-      },{
+        "path": "system/linux/software/tomcat.html"
+        },{
         "text": "zookeeper",
         "type": "link",
-        "path": "linux/software/zookeeper.html"
-      },{
+        "path": "system/linux/software/zookeeper.html"
+        },{
         "text": "metaq",
         "type": "link",
-        "path": "linux/software/metaq.html"
-      },{
+        "path": "system/linux/software/metaq.html"
+        },{
         "text": "redis",
         "type": "link",
-        "path": "linux/software/redis.html"
-      },{
+        "path": "system/linux/software/redis.html"
+        },{
         "text": "vsftpd",
         "type": "link",
-        "path": "linux/software/ftp.html"
-      },{
+        "path": "system/linux/software/ftp.html"
+        },{
         "text": "sftp",
         "type": "link",
-        "path": "linux/software/sftp.html"
-      },{
+        "path": "system/linux/software/sftp.html"
+        },{
         "text": "subversion",
         "type": "link",
-        "path": "linux/software/subversion.html"
-      },{
+        "path": "system/linux/software/subversion.html"
+        },{
         "text": "maven",
         "type": "link",
-        "path": "linux/software/maven.html"
-      },{
+        "path": "system/linux/software/maven.html"
+        },{
         "text": "other",
         "type": "link",
-        "path": "linux/software/other.html"
-      }]
-    },
-    {
-      "text": "issue",
-      "type": "link",
-      "path": "linux/issue.html"
-    },
-    {
-      "text": "NodeJs",
-      "type": "label"
-    },
-    {
-      "text": "Script",
-      "type": "link",
-      "path": "nodejs/script/index.html",
-      "children":
-      [{
-        "text": "i5ting_toc",
-        "type": "link",
-        "path": "nodejs/script/i5ting_toc.html"
-      },{
-        "text": "gulp",
-        "type": "link",
-        "path": "nodejs/script/gulp.html"
-      }]
-    },
-    {
-      "text": "Git",
-      "type": "label"
-    },
-    {
-      "text": "Command",
-      "type": "link",
-      "path": "git/index.html"
-    },
-    {
+        "path": "system/linux/software/other.html"
+        }]
+      },
+      {
         "text": "issue",
         "type": "link",
-        "path": "git/issue.html"
-    },
-    {
-      "text": "Mysql",
-      "type": "label"
-    },
-    {
+        "path": "system/linux/issue.html"
+      }]
+    },{
+      "text": "Mac OS",
+      "type": "link",
+      "path": "system/macos/index.html"
+    }]
+  },{
+      "text": "Language",
+      "type": "link",
+      "path": "language/index.html",
+    "children": 
+      [{
+        "text": "Java",
+        "type": "link",
+        "path": "language/java/index.html"
+      },{
+        "text": "NodeJS",
+        "type": "link",
+        "path": "language/nodejs/index.html",
+    "children": 
+      [{
+        "text": "Script",
+        "type": "link",
+        "path": "language/nodejs/script/index.html",
+        "children":
+          [{
+          "text": "i5ting_toc",
+          "type": "link",
+          "path": "language/nodejs/script/i5ting_toc.html"
+          },{
+          "text": "gulp",
+          "type": "link",
+          "path": "language/nodejs/script/gulp.html"
+          }]
+      }]
+    },{
+        "text": "Android",
+        "type": "link",
+        "path": "language/android/index.html",
+    "children": 
+      [{
+        "text": "Basic",
+        "type": "link",
+        "path": "language/android/basic.html"
+       },{
+        "text": "Issue",
+        "type": "link",
+        "path": "language/android/issue.html"
+       }]
+    }
+  }]
+    },{
+      "text": "DB",
+      "type": "link",
+      "path": "db/index.html",
+    "children": 
+      [{
+        "text": "Mysql",
+        "type": "link",
+        "path": "db/mysql/index.html",
+    "children": 
+    [{
       "text": "Command",
       "type": "link",
       "path": "mysql/index.html"
     },
     {
-        "text": "conf",
-        "type": "link",
-        "path": "mysql/conf.html"
-    },
-    {
-        "text": "issue",
-        "type": "link",
-        "path": "mysql/issue.html"
-    },
-    {
-      "text": "Tools",
-      "type": "label"
-    },
-    {
-      "text": "Sublime Text",
+      "text": "conf",
       "type": "link",
-      "path": "tools/sublimetext.html"
+      "path": "mysql/conf.html"
+    },
+    {
+      "text": "issue",
+      "type": "link",
+      "path": "mysql/issue.html"
+    }]
+      }]
+    },{
+      "text": "Manager",
+      "type": "link",
+      "path": "manager/index.html",
+      "children": 
+        [{
+      "text": "Git",
+      "type": "link",
+      "path": "manager/git/index.html",
+      "children":[
+      {
+      "text": "Command",
+      "type": "link",
+      "path": "manager/git/index.html"
+    },
+    {
+      "text": "issue",
+      "type": "link",
+      "path": "manager/git/issue.html"
+    }]
+    }]
+    },{
+      "text": "Tools",
+      "type": "link",
+      "path": "tools/index.html",
+    "children": 
+      [{
+        "text": "Sublime Text",
+        "type": "link",
+        "path": "tools/sublimetext.html"
+      }]
     },
     {
       "text": "My Github",
