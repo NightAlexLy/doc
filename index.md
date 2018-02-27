@@ -13,6 +13,7 @@ title: my Doc
 - 2018-02-01 添加git章节
 - 2018-02-04 添加mysql章节
 - 2018-02-05 添加tools章节
+- 2018-02-27 重新整理doc目录结构
 
 ** 未完成的事件 **
 
@@ -32,6 +33,8 @@ title: my Doc
   - metaq ( √ )
   - redis ( √ )
   - activemq
+  - kafka
+  - rabbitmq
   - nginx
   - haproxy
   - fastdfs
