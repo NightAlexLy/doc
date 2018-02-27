@@ -21,7 +21,7 @@
       },{
         "text": "Linux",
         "type": "link",
-        "path": "system/system/linux/index.html",
+        "path": "system/linux/index.html",
     "children":
       [{
         "text": "Command",
