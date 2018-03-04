@@ -2,7 +2,9 @@
 title: Mac OS
 ---
 
-## 常用工具
+## 常用工具   
+
+　　[知乎-常用软件](https://www.zhihu.com/question/19550256)
 
 - 笔记
   - EverNote
@@ -45,8 +47,10 @@ title: Mac OS
 
 ## 快捷键
 
+　　[Mac 快捷键](https://support.apple.com/zh-cn/HT201236)
+
 ```
-  mmand+shift+g 弹出地址栏
+  command+shift+g 弹出地址栏
   command+option+c 复制绝对路径
 ```
 
