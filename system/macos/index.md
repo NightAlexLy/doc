@@ -4,6 +4,9 @@ title: Mac OS
 
 ## 常用工具
 
+百度网盘：
+　　链接：https://pan.baidu.com/s/1x9r0iOZB3UM2V2O_4jiknQ 密码：zo3z
+
 - 笔记
   - EverNote
   - 有道云笔记
