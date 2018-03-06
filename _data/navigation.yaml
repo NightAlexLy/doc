@@ -93,6 +93,10 @@
       "type": "link",
       "path": "idea/quotations/index.html"
    },{
+      "text": "learned",
+      "type": "link",
+      "path": "idea/learned/index.html"
+   },{
       "text": "My Github",
       "type": "link",
       "path": "https://github.com/NightAlexLy"
