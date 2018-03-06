@@ -81,17 +81,17 @@
   },{
       "text": "concept",
       "type": "link",
-      "path": "concept/index.html",
+      "path": "idea/concept/index.html",
       "children": 
         [{
           "text": "2018",
           "type": "link",
-          "path": "concept/2018.html"
+          "path": "idea/concept/2018.html"
         }]
    },{
       "text": "quotations",
       "type": "link",
-      "path": "concept/index.html"
+      "path": "idea/quotations/index.html"
    },{
       "text": "My Github",
       "type": "link",
