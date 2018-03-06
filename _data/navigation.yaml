@@ -76,6 +76,23 @@
           "path": "tools/sublimetext.html"
         }]
   },{
+      "text": "Idea",
+      "type": "label"
+  },{
+      "text": "concept",
+      "type": "link",
+      "path": "concept/index.html",
+      "children": 
+        [{
+          "text": "2018",
+          "type": "link",
+          "path": "concept/2018.html"
+        }]
+   },{
+      "text": "quotations",
+      "type": "link",
+      "path": "concept/index.html"
+   },{
       "text": "My Github",
       "type": "link",
       "path": "https://github.com/NightAlexLy"
