@@ -26,6 +26,14 @@ import urllib2,os; pf='Package Control.sublime-package'; ipp = sublime.installed
 
 ## 常用的插件
 
+- Emmet
+- Git
+- GitGutter
+- Markdown Preview
+- Package Control
+- Side Bar
+- Terminal
+
 　　[知乎-sublime text3插件推荐](https://www.zhihu.com/question/24736400)
 　　[github-sublime text](https://github.com/jikeytang/sublime-text)
 　　[简书-sublime text好用插件](https://www.jianshu.com/p/b2163b4e8e94)
