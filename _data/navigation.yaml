@@ -74,6 +74,10 @@
           "text": "Sublime Text",
           "type": "link",
           "path": "tools/sublimetext.html"
+        },{
+          "text": "Chrome",
+          "type": "link",
+          "path": "tools/chrome.html"
         }]
   },{
       "text": "Idea",
