@@ -15,7 +15,7 @@ title: my Doc
 - 2018-02-05 添加tools章节
 - 2018-02-27 重新整理doc目录结构
 - 2018-03-04 添加MyMac常用软件
-- 2018-03-30 添加[Java1.7](language/java.html#JDK1.7 新特性)新特性介绍
+- 2018-03-30 添加[Java1.7](language/java/index.html#JDK1-7-新特性)新特性介绍
 
 
 ** 未完成的事件 **
