@@ -55,5 +55,60 @@ title: Java
 　　　如果参数传递的是不可具体化（non-reifiabe）的类型，如果List<String>这样的泛型类型，会产生警告信息。          
 　　　可变长度的方法参数的实际值是通过数组来传递的，而数组中存储的是不可具体化的泛型对象，自身存在类型安全问题。                  
 　　　Java 7 引入一个新的注解**@SafeVarargs**。如果开发人员确信某个使用了可变长度参数的方法，在与泛型类一起使用时不会出现类型安全问题，就可以用这个注解进行声明。           
-
 ## Java语言的动态性
+　　　Java语言是一种静态类型（指在编译时进行类型检查）的编程语言。Java必须对每个变量的类型都要显示声明。          
+　　　4个部分：             
+　　　　　1.Java 6中引入的脚本语言支持API            
+　　　　　2.运行时检查程序内部接口和直接调用方法的反射API            
+　　　　　3.运行时实现接口的动态代理                
+　　　　　4.Java7中引入Java虚拟机级别实现的动态语言支持和方法句柄             
+- 脚本语言支持API                 
+　　　　很多脚本语言都可以运行在Java虚拟机上。比如JavaScript、JRuby、Jython和Groovy等。    
+　　　　比如一个应用程序可以用不同语言实现的组件结合起来。比如Groovy来编写界面，用Java编写核心业务逻辑，用Ruby进行数据处理。                
+　　　　[JSR 223](https://www.jcp.org/en/jsr/detail?id=223)中规范了在虚拟机上运行的脚本语言与Java程序之间的交互方式。Java标准API中的包是javax.script。         
+   - 脚本引擎               
+　　　一段脚本的执行需要由该脚本语言对应的脚本引擎来完成。Java 6中自带了JavaScript语言的脚本引擎，是基于Mozilla的Rhino来实现的。其他语言的脚本引擎需要下载并放置程序的类路径中。                  
+   - 语言绑定                 
+　　　脚本支持API的优势：规范了Java语言与脚本之间的交互方式，使Java语言编写的程序可以与脚本之间进行双向的方法调用和数据传递。                        
+　　　数据传递是通过语言绑定对象来完成的。javax.script.Bindings定义了语言绑定对象的接口，继承于java.util.Map接口。              
+   - 脚本执行上下文            
+　　　javax.script.ScriptContext包含脚本引擎执行过程中的相关上下文信息。可以与Java EE中servlet规范中javax.servlet.ServletContext进行劣币。主要包含以下3类信息：         
+　　　　1.输入与输出            
+　　　　2.自定义属性           
+　　　　3.语言绑定对象                      
+   - 脚本的编译            
+　　　脚本语言一般是解释执行的。脚本引擎在运行时需要县解析脚本之后在执行。通过教师执行的方式来运行脚本的速度比编译之后在运行会慢一些。当一段脚本需要被多次重复执行时，可以先对脚本进行编译，可以提供执行效率。不是所有的脚本引擎都支持对脚本进行编译，如果支持这一特性，它会实现javax.script.Compilable接口类声明这一点。           
+   - 方法调用                    
+　　　在脚本中，最常见和最实用的就是方法。有些脚本引擎允许使用者单独调用脚本中的某一个方法。支持这种方法调用方式的脚本引擎可以实现javax.script.Invocable接口。       
+　　　ScriptEngine对于Invocable接口的实现是可选的。                   
+- 反射API                 
+　　　反射API是Java语言本身提供的动态支持。通过反射API可以获取Java程序在运行时刻的内部结构。                            
+　　　反射API在为Java程序带来灵活性的同事，也产生了额外的性能代价。在某些对性能要求比较高的应用中，要慎用反射API。                        
+   - 获取构造方法        
+　　　getConstructor、getDeclaredConstructors、getDeclaredConstructor         
+   - 获取域            
+　　　getFields、getField、getDeclaredFields、getDeclaredField          
+   - 获取方法           
+　　　getMethods、getMethod、getDeclaredMethods、getDeclaredMethod          
+   - 操作数组            
+ 　　　java.lang.reflect.Array           
+   - 访问权限与异常处理           
+ 　　　Constructor、Field和Method都集成自java.lang.reflect.AccessibleObject，其中setAccessible可以用来设置是否绕开默认的权限检查。           
+  　　　再利用invok方法来调用方法时，如果方法本身抛出了异常，invoke方法会抛出InvocationTargetException异常来表示这种异常，通过getCause方法可以获取到真正的异常信息，帮助进行调试。           
+- 动态代理         
+  　　　通过使用动态代理，可以在运行时动态创建出多个Java接口的代理类及其对象实例。强大之处在于可以在运行时动态实现多个接口，而不需要源码中通过implements关键词来声明。通过动态代理可以实现面向切面编程（AOP）中常见的方法拦截功能。          
+   - 基本使用方式        
+  　　　两个要素：第一个是要代理的接口，另一个就是处理接口方法调用java.lang.reflect.InvocationHandler接口。动态代理只支持接口，一般的Java类是不行的。如果要代理的接口不是公开的，被代理的接口和创建动态代理的代码必须在同一个包中。             
+  　　　Proxy.newProxyInstance方法来直接创建动态代理对象。通过Proxy.getProxyClass方法来首先获取到代理类。Proxy.isProxy方法来判断是否为代理类。               
+    　　在通过动态代理对象来调用Object类声明的equals、hashCode和toString等方法的时候，这个调用也会被传递给InvocationHandler中的invoke方法。         
+- 动态语言支持              
+  　　　Java7的一个重要的新特性。在于它对Java虚拟机规范的修改，而不是对Java语言规范的修改。涉及的内容包括Java虚拟机中新的方法调用指令invokedynamic,以及Java SE7核心中的java.lang.invoke包。修改内容包含在JSR 292中。           
+## Java7其他重要更新             
+- 关系数据库访问             
+   - 使用try-with-resources语句
+  　　　Java7中，java.sql.Connection、java.sql.Statement和java.sql.ResultSet接口都实现了java.lang.AutoCloseable接口，以支持由try-with-resources语句来管理。
+   - 数据库查询的默认模式
+  　　　大部分关系数据库系统都支持为数据库中包含的表和其他对象创建一个额外的名称空间，即模式（Schema）。一个模式中可以包含表、视图以及其他对象。JDBC4.1为Connection接口添加了一对新的方法getSchema和setSchema用来获取和设置数据库操作时使用的默认模式名称。当通过setSchema进行设置之后，在SQL语句中就不需要使用模式名称作为前缀了。                
+   - 数据库连接超时时间与终止
+  　　　setNetworkTimeout用来设置通过此数据库连接进行数据库操作时的超时等待时间。      
+  　　　与setNetworkTimeout相关的方法abort用来强制关闭一个数据库连接。
