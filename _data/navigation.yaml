@@ -87,7 +87,7 @@
       "text": "Idea",
       "type": "label"
   },{
-      "text": "concept",
+      "text": "Concept",
       "type": "link",
       "path": "idea/concept/index.html",
       "children": 
@@ -97,11 +97,11 @@
           "path": "idea/concept/2018.html"
         }]
    },{
-      "text": "quotations",
+      "text": "Quotations",
       "type": "link",
       "path": "idea/quotations/index.html"
    },{
-      "text": "learned",
+      "text": "Learned",
       "type": "link",
       "path": "idea/learned/index.html"
    },{
