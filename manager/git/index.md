@@ -227,3 +227,18 @@ title: Git Command
 　git remote add origin https://username:password@github.com/username/test.git
 　git push origin master
 ```
+
+###  git 错误: Unable to find remote helper for 'https'解决方法
+
+```
+　vi /etc/profile
+  添加"export PATH=$PATH:/usr/libexec/git-core"
+
+  source /etc/profile
+
+或者是安装问题
+
+  make prefix=/usr all doc info ;# as yourself  
+  make prefix=/usr install install-doc install-html install-info ;# as root  
+
+```

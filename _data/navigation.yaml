@@ -64,6 +64,10 @@
           "text": "Git",
           "type": "link",
           "path": "manager/git/index.html"
+        },{
+          "text": "Docker",
+          "type": "link",
+          "path": "manager/docker/index.html"
         }]
   },{
       "text": "Tools",
