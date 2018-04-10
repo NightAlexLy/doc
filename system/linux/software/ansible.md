@@ -2,10 +2,10 @@
 title: Ansible Install
 ---
 
-0. Ansible介绍
+### Ansible介绍
 　　[Ansible](http://www.ansible.com.cn/)是一个简单的自动化运维管理工具，可以用来自动化部署应用、配置、编排 task(持续交付、无宕机更新等)，采用 paramiko 协议库（fabric 也使用这个）。           
 ![Ansbile](http://ore2d9chp.bkt.clouddn.com/ansible.png)            
-1. 安装环境及介质      
+### 安装环境及介质      
 安装版本：Ansible 1.7.2           
 操作系统：Linux xxx 3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux           
 虚拟机镜像：CentOS-6.6-x86_64-bin-DVD1.iso        
@@ -22,8 +22,8 @@ title: Ansible Install
 　　[setuptools-7.0.tar.gz](https://pypi.python.org/packages/source/s/setuptools/setuptools-7.0.tar.gz)
 　　[simplejson-3.6.5.tar.gz](https://pypi.python.org/packages/source/s/simplejson/simplejson-3.6.5.tar.gz)
 　　[yaml-0.1.5.tar.gz](http://pyyaml.org/download/libyaml/yaml-0.1.5.tar.gz)
-```
-2. 开始安装
+
+### 开始安装
 　　2.1 Python2.7安装
 ```
 $  tar –zxvf Python-2.7.8.tgz
