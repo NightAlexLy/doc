@@ -3,6 +3,7 @@ title: Ansbile-Tower Install
 ---
 
 ### 资源
+
 ```
 ansible-tower-setup-bundle-2.4.3-1.el7.tgz，
 lisence.rtf，
@@ -13,7 +14,7 @@ xlrd-0.9.4.tar.gz，
 get_inventory.py，
 projects.zip
 ```
-### 安装
+### 安装Tower
 
 拷贝至Tower服务器/root目录下。
 ```

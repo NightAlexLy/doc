@@ -23,14 +23,14 @@ svnversion, version 1.7.14 (r1542130)
 b. 搭建仓库
 
 ```
-　　[root@hostname ~]# mkdir -p /opt/svn/repos
-　　[root@hostname ~]# svnadmin create /opt/svn/repos
+[root@hostname ~]# mkdir -p /opt/svn/repos
+[root@hostname ~]# svnadmin create /opt/svn/repos
 ```
 
 c. 设置配置文件
 
 ```
-　　[root@hostname ~]# cd /opt/svn/repos/conf
+[root@hostname ~]# cd /opt/svn/repos/conf
 
 编辑认证文件authz
 　　[root@hostname ~]# vi authz
@@ -44,7 +44,8 @@ c. 设置配置文件
 　　[repos:/]
 　　user = rw
 
-　　[root@hostname ~]# vi passwd
+[root@hostname ~]# vi passwd
+
 编辑用户密码文件passwd:
 添加：
 	[users]
@@ -65,13 +66,13 @@ c. 设置配置文件
 d. 启动svn-server
 
 ```
-　　[root@hostname ~]# svnserve -d -r /opt/svn/repos
+[root@hostname ~]# svnserve -d -r /opt/svn/repos
 ```
 
 e. 校验svn-server 
 
 ```
-　　[root@hostname ~]# svn list svn://xxx.xxx.xxx.xxx/
+[root@hostname ~]# svn list svn://xxx.xxx.xxx.xxx/
 ```
 
 f. 关于svn的资料

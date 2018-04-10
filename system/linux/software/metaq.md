@@ -12,43 +12,42 @@ title: Metaq Install
 a. 添加metaq用户
 
 ```
-　　[root@hostname ~]# useradd metaq
-　　[root@hostname ~]# echo "密码" | passwd --stdin metaq
+[root@hostname ~]# useradd metaq
+[root@hostname ~]# echo "密码" | passwd --stdin metaq
 ```
 
 b. 下载安装包并解压
 
 ```
-　　[root@hostname ~]# cd /opt
-　　[root@hostname ~]# wget http://ore2d9chp.bkt.clouddn.com/metaq-server-1.4.6.2.tar.gz
-　　[root@hostname ~]# tar -zxf metaq-server-1.4.6.2.tar.gz -C /opt
-　　[root@hostname ~]# chown -R metaq.metaq /opt/taobao
-
+[root@hostname ~]# cd /opt
+[root@hostname ~]# wget http://ore2d9chp.bkt.clouddn.com/metaq-server-1.4.6.2.tar.gz
+[root@hostname ~]# tar -zxf metaq-server-1.4.6.2.tar.gz -C /opt
+[root@hostname ~]# chown -R metaq.metaq /opt/taobao
 ```
 
 c. 修改服务器上的hosts 文件（集群模式）
 
 ```
-　　[root@hostname ~]# vi /etc/hosts
+[root@hostname ~]# vi /etc/hosts
 
-　　　　#127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
-　　　　#::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-　　　　xxx.xxx.xxx.xxx                      metaq_trans         #metaq server1 ip hostname
-　　　　xxx.xxx.xxx.xxx                      metaq_trans2        #metaq server2 ip hostname
-　　　　xxx.xxx.xxx.xxx                      metaq_trans3        #metaq server3 ip hostname
+　　#127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+　　#::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+　　xxx.xxx.xxx.xxx                      metaq_trans         #metaq server1 ip hostname
+　　xxx.xxx.xxx.xxx                      metaq_trans2        #metaq server2 ip hostname
+　　xxx.xxx.xxx.xxx                      metaq_trans3        #metaq server3 ip hostname
 
 ```
 
 d. 对配置文件做一个备份
 
 ```
-　　[root@hostname ~]# cp -a /opt/taobao/metamorphosis-server-wrapper/conf/server.ini  /opt/taobao/metamorphosis-server-wrapper/conf/server.ini.ori
+[root@hostname ~]# cp -a /opt/taobao/metamorphosis-server-wrapper/conf/server.ini  /opt/taobao/metamorphosis-server-wrapper/conf/server.ini.ori
 ```
 
 e. 修改配置文件
 
 ```
-　　[root@hostname ~]# vi /opt/taobao/metamorphosis-server-wrapper/conf/server.ini
+[root@hostname ~]# vi /opt/taobao/metamorphosis-server-wrapper/conf/server.ini
 　　配置如下：
 　　　　[system]
 　　　　brokerId=4
@@ -84,8 +83,8 @@ e. 修改配置文件
 f. 启动Metaq
 
 ```
-　　[root@hostname ~]# su - metaq
-　　[root@hostname ~]# /opt/taobao/metamorphosis-server-wrapper/bin/metaServer.sh start  #启动
-　　[root@hostname ~]# /opt/taobao/metamorphosis-server-wrapper/bin/metaServer.sh stop  #停止
-　　[root@hostname ~]# /opt/taobao/metamorphosis-server-wrapper/bin/metaServer.sh status  #查看状态
+[root@hostname ~]# su - metaq
+[root@hostname ~]# /opt/taobao/metamorphosis-server-wrapper/bin/metaServer.sh start  #启动
+[root@hostname ~]# /opt/taobao/metamorphosis-server-wrapper/bin/metaServer.sh stop  #停止
+[root@hostname ~]# /opt/taobao/metamorphosis-server-wrapper/bin/metaServer.sh status  #查看状态
 ```

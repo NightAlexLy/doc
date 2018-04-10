@@ -2,12 +2,6 @@
 title: Kafka Install
 ---
 
- **特别说明**
- 
- 　　1.  JDK的版本：**jdk-7u79-linux-x64.tar.gz**
- 　　2.  安装路径：**/opt/java**
- 　　3.  安装用户：**root**
-
 ### 安装Jdk
 
 　　参考[JDK](/system/linux/software/jdk.html)安装流程

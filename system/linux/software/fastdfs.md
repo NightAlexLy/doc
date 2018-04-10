@@ -12,9 +12,7 @@ wget http://labs.frickle.com/files/ngx_cache_purge-2.3.tar.gz
 ```
 
 ### Tracker安装
-Tracker安装
-准备工作
-将tracker目录下安装介质拷贝至目标机器的opt目录下
+将安装介质拷贝至目标机器的opt目录下（省略）
 
 关闭防火墙
 ```
@@ -26,7 +24,6 @@ Tracker安装
 ```
 [root]# yum install -y gcc gcc-c++ make automake autoconf libtool pcre* zlib openssl openssl-devel 
 ```
-成功截图：
  
 解压安装libfastcommon-master
 ```
@@ -111,9 +108,9 @@ Tracker安装
 ```
 
 ### Storage安装
-准备工作
-将storage目录下安装介质拷贝至目标机器的opt目录下
- 关闭防火墙
+将安装介质拷贝至目标机器的opt目录下（省略）
+
+关闭防火墙
 ```
 [root]# chkconfig --level 2345 iptables off
 [root]# chkconfig --list|grep iptables
@@ -123,7 +120,6 @@ Tracker安装
 ```
 [root]# yum install -y gcc gcc-c++ make automake autoconf libtool pcre* zlib openssl openssl-devel
 ```
-成功截图：
  
 解压安装libfastcommon-master
 ```

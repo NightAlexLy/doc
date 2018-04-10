@@ -62,32 +62,31 @@ title: Other Software Install
 　　　** [hexo](https://hexo.io/) 是node构建博客网站的模块 **
 
 ```
-
-	cd /opt    
-	npm install hexo-cli -g
-	hexo init blog
-	cd blog
-	npm install
-	hexo server
+    cd /opt    
+    npm install hexo-cli -g
+    hexo init blog
+    cd blog
+    npm install
+    hexo server
 
 hexo命令：
-	Usage: hexo <command>
+    Usage: hexo <command>
 	
-	Commands:
-	  help     Get help on a command.
-	  init     Create a new Hexo folder.
-	  version  Display version information.
+    Commands:
+      help     Get help on a command.
+      init     Create a new Hexo folder.
+      version  Display version information.
 	
-	Global Options:
-	  --config  Specify config file instead of using _config.yml
-	  --cwd     Specify the CWD
-	  --debug   Display all verbose messages in the terminal
-	  --draft   Display draft posts
-	  --safe    Disable all plugins and scripts
-	  --silent  Hide output on console
+    Global Options:
+      --config  Specify config file instead of using _config.yml
+      --cwd     Specify the CWD
+      --debug   Display all verbose messages in the terminal
+      --draft   Display draft posts
+      --safe    Disable all plugins and scripts
+      --silent  Hide output on console
 	
-	For more help, you can use 'hexo help [command]' for the detailed information
-	or you can check the docs: http://hexo.io/docs/
+    For more help, you can use 'hexo help [command]' for the detailed information
+    or you can check the docs: http://hexo.io/docs/
 
 ```
 
@@ -97,53 +96,53 @@ hexo命令：
 
 ```
 	
-	npm install -g i5ting_toc
+    npm install -g i5ting_toc
 
-	Usage: i5ting_toc  a node npm wrapper of i5ting_ztree_toc https://github.com/i5ting/i5ting_ztree_toc 
+    Usage: i5ting_toc  a node npm wrapper of i5ting_ztree_toc https://github.com/i5ting/i5ting_ztree_toc 
 
-	Options:
+    Options:
 
-	  -h, --help             output usage information
-	  -V, --version          output the version number
-	  -f, --file [filename]  default is README.md 
-	      -o, --open             open in browser
-	  -v, --verbose          打印详细日志
+      -h, --help             output usage information
+      -V, --version          output the version number
+      -f, --file [filename]  default is README.md 
+      -o, --open             open in browser
+      -v, --verbose          打印详细日志
 
 windows下编写转换js：
 	
-	var arguments = process.argv.splice(2);
-	var source_file_name = arguments[0];
-	var marked = require('marked');
-	var is_open = true;
-	var markd_config = {
-	  renderer: new marked.Renderer(),
-	  gfm: true,
-	  tables: true,
-	  breaks: false,
-	  pedantic: false,
-	  sanitize: false,
-	  smartLists: true,
-	  smartypants: false,
-	  xhtml: false,
-	  index: true
-	}
+    var arguments = process.argv.splice(2);
+    var source_file_name = arguments[0];
+    var marked = require('marked');
+    var is_open = true;
+    var markd_config = {
+      renderer: new marked.Renderer(),
+      gfm: true,
+      tables: true,
+      breaks: false,
+      pedantic: false,
+      sanitize: false,
+      smartLists: true,
+      smartypants: false,
+      xhtml: false,
+      index: true
+    }
 
-	console.log('source_file_name=' + source_file_name);
-	//函数可以返回当前正在执行的项目路径
-	var pwd = process.cwd()  
+    console.log('source_file_name=' + source_file_name);
+    //函数可以返回当前正在执行的项目路径
+    var pwd = process.cwd()  
 
-	//var source_file_name = pwd + '/' + source_file
-	var file_name = source_file_name.split('/').pop();
-	var _file_name = file_name.substr(file_name.lastIndexOf("\\")+1).split('.')[0];
+    //var source_file_name = pwd + '/' + source_file
+    var file_name = source_file_name.split('/').pop();
+    var _file_name = file_name.substr(file_name.lastIndexOf("\\")+1).split('.')[0];
 
-	var dest_file_path = pwd + '/preview/' + _file_name + '.html';
+    var dest_file_path = pwd + '/preview/' + _file_name + '.html';
 
-	console.log('arguments='+ arguments);
-	console.log('pwd=' + pwd);
-	console.log('source_file_name=' + source_file_name);
-	console.log('dest_file_path=' + dest_file_path);
+    console.log('arguments='+ arguments);
+    console.log('pwd=' + pwd);
+    console.log('source_file_name=' + source_file_name);
+    console.log('dest_file_path=' + dest_file_path);
 
-	require('i5ting_toc')(pwd,source_file_name, dest_file_path, is_open, markd_config);
+    require('i5ting_toc')(pwd,source_file_name, dest_file_path, is_open, markd_config);
 
 ```
 
@@ -153,9 +152,8 @@ windows下编写转换js：
 
 ```
 
-	npm install -d --save gulp gulp-clean gulp-load-plugins gulp-minify-css gulp-minify-html gulp-rename gulp-uglify gulp-shell typescript
+    npm install -d --save gulp gulp-clean gulp-load-plugins gulp-minify-css gulp-minify-html gulp-rename gulp-uglify gulp-shell typescript
 
-	编写gulp.js
-
+    编写gulp.js
 	
 ```

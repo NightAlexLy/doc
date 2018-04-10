@@ -5,7 +5,7 @@ title: Haproxy Install
 ### 安装
 
 将haproxy-1.4.21.tar.gz拷贝至服务器的/opt目录下
-
+```
 [root@localhost ~]# cd /opt
 [root@localhost ~]# wget http://ore2d9chp.bkt.clouddn.com/haproxy-1.4.21.tar.gz
 [root@localhost opt]# tar -zxvf haproxy-1.4.21.tar.gz
@@ -17,7 +17,7 @@ title: Haproxy Install
 [root@localhost haproxy]# vi haproxy.cfg
 
 增加Haproxy  Manager:
-	listen admin_stats
+        listen admin_stats
         bind 0.0.0.0:8888
         option httplog
         stats refresh 30s
@@ -28,7 +28,7 @@ title: Haproxy Install
 
 [root@localhost opt]# touch /etc/rc.d/init.d/haproxy
 [root@localhost opt]# vi /etc/rc.d/init.d/haproxy
-
+```
 增加启动脚本：
 ```
 #!/bin/bash  
@@ -72,9 +72,10 @@ esac
 exit $ERROR  
 ```
 启动成功：
+```
 [root@localhost haproxy]# service haproxy start   
 START HAPoxy SERVERS
-
+```
 报错：
 1. [root@localhost haproxy]# service haproxy start
 ```

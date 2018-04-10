@@ -24,9 +24,7 @@ title: my Doc
 - linux command
   - vi/vim ( √ )
   - find ( √ )
-  - user 
   - file ( √ )
-  - yum
   - network ( √ )
   - ps  ( √ )
   - chmod  ( √ )
@@ -37,15 +35,14 @@ title: my Doc
   - redis ( √ )
   - activemq　( √ )
   - kafka　( √ )
-  - rabbitmq
+  - rabbitmq　( √ )
   - nginx ( √ )
   - haproxy ( √ )
   - fastdfs ( √ )
-  - ansible
-  - ansible tower
+  - ansible ( √ )
+  - ansible tower ( √ )
   - ftp ( √ )
   - sftp ( √ )
-  - taokeeper
   - subversion ( √ )
   - maven ( √ )
 - linux shell 编写(语法)

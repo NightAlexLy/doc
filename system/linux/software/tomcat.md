@@ -12,16 +12,16 @@ title: Tomcat Install
 a. 检查是否安装tomcat
 
 ```
-　　[root@hostname ~]# ps -ef | grep tomcat
-　　[root@hostname ~]# rpm -qa | grep tomcat
+[root@hostname ~]# ps -ef | grep tomcat
+[root@hostname ~]# rpm -qa | grep tomcat
 ```
 
 b. 安装tomcat
 
 ```
-　　[root@hostname ~]# cd /opt
-　　[root@hostname ~]# wget  http://ore2d9chp.bkt.clouddn.com/zookeeper-3.4.7.tar.gz
-　　[root@hostname ~]# tar -zxvf apache-tomcat-7.0.64.tar.gz
-　　[root@hostname ~]# mv apache-tomcat-7.0.64 apache-tomcat
+[root@hostname ~]# cd /opt
+[root@hostname ~]# wget  http://ore2d9chp.bkt.clouddn.com/zookeeper-3.4.7.tar.gz
+[root@hostname ~]# tar -zxvf apache-tomcat-7.0.64.tar.gz
+[root@hostname ~]# mv apache-tomcat-7.0.64 apache-tomcat
 ```
 
