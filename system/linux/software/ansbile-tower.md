@@ -1,74 +1,68 @@
 ---
 title: Ansbile-Tower Install
 ---
- 
- **特别说明**
- 
- 　　1.  JDK的版本：**jdk-7u79-linux-x64.tar.gz**
- 　　2.  安装路径：**/opt/java**
- 　　3.  安装用户：**root**
- 
-a. 检查系统自带的jdk版本
 
+### 资源
 ```
-　　[root@hostname ~]# java -version
-　　[root@hostname ~]# rpm -qa | grep java
+ansible-tower-setup-bundle-2.4.3-1.el7.tgz，
+lisence.rtf，
+rpm-gpg.zip，
+task_engine.pyo，
+tower-bundle.zip，
+xlrd-0.9.4.tar.gz，
+get_inventory.py，
+projects.zip
 ```
+### 安装
 
-b. 卸载自带的JDK的信息[没有自带JDK可不执行]
-
+拷贝至Tower服务器/root目录下。
 ```
-　　[root@hostname ~]# rpm -e java-1.7.0-openjdk-1.7.0.79-2.5.5.4.el6.x86_64
-　　[root@hostname ~]# rpm -e java-1.6.0-openjdk-1.6.0.35-1.13.7.1.el6_6.x86_64
+[root@hostname]# yum install -y unzip
+[root@hostname]# unzip tower-bundle.zip -d /var/lib
+[root@hostname]# unzip -o rpm-gpg.zip -d /etc/pki/
+[root@hostname]# tar -zxvf xlrd-0.9.4.tar.gz 
+[root@hostname]# cd xlrd-0.9.4
+[root@hostname]# python setup.py install
+[root@hostname]# cd ~
+[root@hostname]# tar -zxvf ansible-tower-setup-bundle-2.4.3-1.el7.tgz 
+[root@hostname]# cd ansible-tower-setup-bundle-2.4.3-1.el7
+[root@hostname]# ./configure
+	执行这个文件：./configure,会交互式收集安装信息，按照如下顺序应答：
+		第一个问题：回车
+		第二个问题：i
+		第三个问题：redhat
+		确认密码：redhat
+		第四个问题：y
+[root@hostname]#  ./setup.sh
+
+
+[root@hostname]#  cd ~
+[root@hostname]#  cp get_inventory.py /var/lib/awx
+[root@hostname]#  ssh-keygen -t rsa -P ''
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa):   【回车】
+Created directory '/root/.ssh'.
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+4b:d1:b8:eb:b9:79:93:1e:a7:6d:07:33:32:14:74:d1 root@i-psx9pwbx
+The key's randomart image is:
++--[ RSA 2048]----+
+|         .. oo   |
+|         o..  E  |
+|        o ..     |
+|         o.      |
+|        S.       |
+|       . oo +    |
+|        o .+.+   |
+|       . o+=. .  |
+|        =+oo..   |
++-----------------+
+[root@hostname]#  cp task_engine.pyo /usr/lib/python2.7/site-packages/awx/main/task_engine.pyo   [提示覆盖，请输入Y]
+[root@hostname]#  chmod 755 /var/lib/awx/get_inventory.py
+[root@hostname]#  unzip -o projects.zip -d /var/lib/awx/
+[root@hostname]#  systemctl restart httpd
+
+在浏览器中输入本机IP访问
 ```
-
-c. tar.gz包安装
-
-```
-进入/opt目录
-　　[root@hostname ~]# cd /opt/
-解压安装包
-　　[root@hostname ~]# tar -zxf jdk-7u79-linux-x64.tar.gz -C /opt
-　　[root@hostname ~]# cd /opt
-对解压的目录重命名
-　　[root@hostname ~]# mv jdk1.7.0_79 jdk
-改变/opt/jdk的目录权限
-　　[root@hostname ~]# chown -R root.root /opt/jdk
-　　[root@hostname ~]# ls -ld /opt/jdk
-```
-
-d. 配置环境变量,在/etc/profile文件下添加
-
-```
-　　[root@hostname ~]# cp -a /etc/profile /etc/profile.ori
-　　[root@hostname ~]# ll /etc/profile*
- 
-　　[root@hostname ~]# echo 'export JAVA_HOME=/opt/jdk' >>  /etc/profile
-　　[root@hostname ~]# echo 'export CLASSPATH=$JAVA_HOME/lib' >>  /etc/profile
-　　[root@hostname ~]# echo 'export PATH=$JAVA_HOME/bin:$PATH' >>  /etc/profile
-```
-
-e. 执行环境变量
-
-```
-　　[root@hostname ~]# source /etc/profile
-```
-
-f. 查看设置的环境变量
-
-```
-　　[root@hostname ~]# echo $PATH
-　　[root@hostname ~]# echo $CLASSPATH
-　　[root@hostname ~]# echo $JAVA_HOME
-```
-
-g. 查看java版本
-
-```
-　　[root@hostname ~]# java -version
-```
-
-
-
-
 

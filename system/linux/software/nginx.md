@@ -1,74 +1,33 @@
 ---
 title: Nginx Install
 ---
+
+### 安装
  
- **特别说明**
- 
- 　　1.  JDK的版本：**jdk-7u79-linux-x64.tar.gz**
- 　　2.  安装路径：**/opt/java**
- 　　3.  安装用户：**root**
- 
-a. 检查系统自带的jdk版本
+```
+yum install pcre* -y
+yum install openssl* -y
+yum install zlib -y
+yum install zlib-devel -y
+yum install wget -y 
+cd /opt
+wget http://nginx.org/download/nginx-1.13.0.tar.gz
+cp nginx-1.13.0.tar.gz /usr/local
+cd /usr/local
+tar -zxvf nginx-1.13.0.tar.gz
+mv nginx-1.13.0 nginx
+./configure --prefix=/usr/local/nginx
+make && make install 
+ln -s /usr/local/nginx/sbin/nginx /usr/local/bin/nginx
+#启动
+nginx
+#浏览器直接访问http://localhost/即可访问到Nginx的静态页面
+	#因为Nginx默认占用80端口,所以必须以root用户启动
 
 ```
-　　[root@hostname ~]# java -version
-　　[root@hostname ~]# rpm -qa | grep java
-```
 
-b. 卸载自带的JDK的信息[没有自带JDK可不执行]
+### 资料
 
-```
-　　[root@hostname ~]# rpm -e java-1.7.0-openjdk-1.7.0.79-2.5.5.4.el6.x86_64
-　　[root@hostname ~]# rpm -e java-1.6.0-openjdk-1.6.0.35-1.13.7.1.el6_6.x86_64
-```
-
-c. tar.gz包安装
-
-```
-进入/opt目录
-　　[root@hostname ~]# cd /opt/
-解压安装包
-　　[root@hostname ~]# tar -zxf jdk-7u79-linux-x64.tar.gz -C /opt
-　　[root@hostname ~]# cd /opt
-对解压的目录重命名
-　　[root@hostname ~]# mv jdk1.7.0_79 jdk
-改变/opt/jdk的目录权限
-　　[root@hostname ~]# chown -R root.root /opt/jdk
-　　[root@hostname ~]# ls -ld /opt/jdk
-```
-
-d. 配置环境变量,在/etc/profile文件下添加
-
-```
-　　[root@hostname ~]# cp -a /etc/profile /etc/profile.ori
-　　[root@hostname ~]# ll /etc/profile*
- 
-　　[root@hostname ~]# echo 'export JAVA_HOME=/opt/jdk' >>  /etc/profile
-　　[root@hostname ~]# echo 'export CLASSPATH=$JAVA_HOME/lib' >>  /etc/profile
-　　[root@hostname ~]# echo 'export PATH=$JAVA_HOME/bin:$PATH' >>  /etc/profile
-```
-
-e. 执行环境变量
-
-```
-　　[root@hostname ~]# source /etc/profile
-```
-
-f. 查看设置的环境变量
-
-```
-　　[root@hostname ~]# echo $PATH
-　　[root@hostname ~]# echo $CLASSPATH
-　　[root@hostname ~]# echo $JAVA_HOME
-```
-
-g. 查看java版本
-
-```
-　　[root@hostname ~]# java -version
-```
-
-
-
-
-
+- [linux环境下安装nginx教程](http://jingyan.baidu.com/album/1974b2898f5eadf4b1f774de.html?picindex=6)
+- [linux下安装nginx](http://www.cnblogs.com/kunhu/p/3633002.html)
+- [Installing nginx on CentOS 6.4](https://codybonney.com/installing-nginx-on-centos-6-4/)

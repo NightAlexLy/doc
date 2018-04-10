@@ -68,10 +68,9 @@ zookeeper：kafka 通过 zookeeper 来存储集群的 meta 信息。
 配置集群
 	拷贝conf/server.properties. 
 	修改broker.id
-		listeners
-		log.dir
+	listeners
+	log.dir
 	通过启动kafka命令， 后面不同的server.properties文件
-
 
 ```
 

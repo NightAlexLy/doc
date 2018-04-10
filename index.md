@@ -36,11 +36,11 @@ title: my Doc
   - metaq ( √ )
   - redis ( √ )
   - activemq　( √ )
-  - kafka
+  - kafka　( √ )
   - rabbitmq
-  - nginx
-  - haproxy
-  - fastdfs
+  - nginx ( √ )
+  - haproxy ( √ )
+  - fastdfs ( √ )
   - ansible
   - ansible tower
   - ftp ( √ )

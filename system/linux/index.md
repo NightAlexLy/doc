@@ -23,17 +23,23 @@ title: Linux
 
 ## Software
 
+- [ansible](software/ansible.html)
+- [ansible-tower](software/ansible-tower.html)
 - [jdk](software/jdk.html)
 - [activemq](software/activemq.html)
 - [kafka](software/kafka.html)
+- [rabbitmq](software/rabbitmq.html)
 - [tomcat](software/tomcat.html)
 - [zookeeper](software/zookeeper.html)
 - [metaq](software/metaq.html)
 - [redis](software/redis.html)
+- [fastdfs](software/fastdfs.html)
 - [vsftpd](software/ftp.html)
 - [sftp](software/sftp.html)
 - [subversion](software/subversion.html)
 - [maven](software/maven.html)
+- [nginx](software/nginx.html)
+- [haproxy](software/haproxy.html)
 - [other](software/other.html)
 
 ## Issue

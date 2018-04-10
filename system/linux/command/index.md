@@ -88,4 +88,6 @@ title: Common Command
 69. cat /proc/cpuinfo | sed -n 5p     获得处理器名称
 70. du -skh filename   查看文件大小  单位：M
 71. export EnvName=EnvValue   设置环境变量
+72. rpm -e nodeps 应用名   rpm卸载应用   ||  rpm -e 
+73. yum remove 应用名  yum卸载应用
 ```             
