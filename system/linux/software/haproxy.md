@@ -77,6 +77,7 @@ START HAPoxy SERVERS
 
 报错：
 1. [root@localhost haproxy]# service haproxy start
+```
 START HAPoxy SERVERS
 [WARNING] 150/045452 (48330) : parsing [/usr/local/haproxy/haproxy.cfg:21]: keyword 'redispatch' is deprecated, please use 'option redispatch' instead.
 [ALERT] 150/045452 (48330) : parsing [/usr/local/haproxy/haproxy.cfg:88] : error opening file </etc/haproxy/errors/503.http> for custom error message <503>.
@@ -86,14 +87,15 @@ START HAPoxy SERVERS
 
 解决办法：
 	将/usr/local/haproxy/haproxy.cfg文件的21行和88行注释即可。
-
+```
 2. [root@localhost haproxy]# service haproxy start
+```
 START HAPoxy SERVERS
 [ALERT] 150/045942 (48392) : [/usr/local/haproxy/sbin/haproxy.main()] Cannot chroot(/usr/share/haproxy).
 
 解决办法:
 	[root@localhost haproxy]# mkdir /usr/share/haproxy
-
+```
 
 访问：
 	http://192.168.91.131:8888/stats
