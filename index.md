@@ -35,7 +35,7 @@ title: my Doc
   - zookeeper ( √ )
   - metaq ( √ )
   - redis ( √ )
-  - activemq
+  - activemq　( √ )
   - kafka
   - rabbitmq
   - nginx

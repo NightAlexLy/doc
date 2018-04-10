@@ -25,6 +25,7 @@ title: Linux
 
 - [jdk](software/jdk.html)
 - [activemq](software/activemq.html)
+- [kafka](software/kafka.html)
 - [tomcat](software/tomcat.html)
 - [zookeeper](software/zookeeper.html)
 - [metaq](software/metaq.html)
