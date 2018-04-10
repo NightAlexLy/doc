@@ -24,7 +24,7 @@ title: Ansible Install
 　　[yaml-0.1.5.tar.gz](http://pyyaml.org/download/libyaml/yaml-0.1.5.tar.gz)
 
 ### 开始安装
-　　2.1 Python2.7安装
+#### Python2.7安装
 ```
 $  tar –zxvf Python-2.7.8.tgz
 $  cd Python-2.7.8
@@ -32,59 +32,57 @@ $  ./configure –prefix=/usr/local
 $  make --jobs=`grep processor /proc/cpuinfo | wc -l`
 $  make install
 ```
-　　**将python头文件拷贝到标准目录，以避免编译ansible时，找不到所需的头文件**
+**将python头文件拷贝到标准目录，以避免编译ansible时，找不到所需的头文件**
 ```
 $  cd /usr/local/include/python2.7
 $  cp -a ./* /usr/local/include/
 ```
-　　**备份旧版本的python，并符号链接新版本的python**
+**备份旧版本的python，并符号链接新版本的python**
 ```
 $  cd /usr/bin
 $  mv python python2.6
 $  ln -s /usr/local/bin/python
 ```
-　　**修改yum脚本，使其指向旧版本的python，已避免其无法运行**
+**修改yum脚本，使其指向旧版本的python，已避免其无法运行**
 ```
 $  vim /usr/bin/yum
   !/usr/bin/python  -->  #!/usr/bin/python2.6    (将Python改成Python2.6)
 ```
-　　2.2 python-setuptools模块安装
+#### python-setuptools模块安装
 ```
 $  tar -zxvf setuptools-7.0.tar.gz 
 $  cd setuptools-7.0
 $  python setup.py install 
 ```
-　　2.3 python-pycrypto模块安装
+#### python-pycrypto模块安装
 ```
 $  tar -zxvf pycrypto-2.6.1.tar.gz
 $  cd pycrypto-2.6.1
 $  python setup.py install 
 ```
-　　2.4 python-PyYAML模块安装
+#### python-PyYAML模块安装
 ```
 $  tar -zxvf yaml-0.1.5.tar.gz
 $  cd yaml-0.1.5
 $  ./configure --prefix=/usr/local
 $  make --jobs=`grep processor /proc/cpuinfo | wc -l`
 $  make install
-```
-```
+
 $  tar -zxvf PyYAML-3.11.tar.gz
 $  cd PyYAML-3.11
 $  python setup.py install 
 ```
-　　2.5 python-Jinja2模块安装
+####  python-Jinja2模块安装
 ```
 $  tar -zxvf MarkupSafe-0.9.3.tar.gz
 $  cd MarkupSafe-0.9.3
 $  python setup.py install
-```
-```
+
 $  tar -zxvf Jinja2-2.7.3.tar.gz
 $  cd Jinja2-2.7.3
 $  python setup.py install
 ```
-　　2.6 python-paramiko模块安装
+####  python-paramiko模块安装
 ```
 $  tar -zxvf ecdsa-0.11.tar.gz
 $  cd ecdsa-0.11
@@ -94,25 +92,25 @@ $  tar -zxvf paramiko-1.15.1.tar.gz
 $  cd paramiko-1.15.1
 $  python setup.py install
 ```
-　　2.7 python-simplejson模块安装
+#### python-simplejson模块安装
 ```
 $  tar -zxvf simplejson-3.6.5.tar.gz
 $  cd simplejson-3.6.5
 $  python setup.py install
 ```
-　　2.8 python-ansible模块安装
+#### python-ansible模块安装
 ```
 $  tar -zxvf ansible-1.7.2.tar.gz
 $  cd ansible-1.7.2
 $  python setup.py install
 ```
-3.	配置及测试
-　　3.1 配置
-　　**SSH免密钥登录设置**
+### 配置及测试
+#### 配置
+**SSH免密钥登录设置**
 ```
 $  ssh-keygen -t rsa -P ''
 ```
-　　** ansible配置**
+** ansible配置**
 ```
 $   mkdir -p /etc/ansible
 $   touch /etc/ansible/ansible.cfg
@@ -136,11 +134,11 @@ $  vim /etc/ansible/hosts
 [test]
 192.168.91.137
 ```
-　　3.2 测试
+#### 测试
 ```
 $  ansible test -m ping
 ```
-4. 参考文章
+### 参考文章
 
 - [Ansible官网全模块文档](http://docs.ansible.com/ansible/list_of_all_modules.html)
 - [自动化运维工具Ansible详细部署](http://sofar.blog.51cto.com/353572/1579894/)
