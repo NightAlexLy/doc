@@ -105,6 +105,16 @@
       "type": "link",
       "path": "idea/learned/index.html"
    },{
+      "text": "Interview",
+      "type": "link",
+      "path": "idea/interview/index.html",
+      "children": 
+        [{
+          "text": "Java-20180410",
+          "type": "link",
+          "path": "idea/interview/java20180410.html"
+        }]
+   },{
       "text": "My Github",
       "type": "link",
       "path": "https://github.com/NightAlexLy"
