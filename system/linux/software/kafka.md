@@ -79,3 +79,4 @@ zookeeper：kafka 通过 zookeeper 来存储集群的 meta 信息。
 ### 资料
 
 - [官网文档](http://kafka.apache.org/intro)
+- [kafka 及 kafka-Manager问题记录](https://blog.csdn.net/love254443233/article/details/50699076)
