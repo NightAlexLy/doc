@@ -14,7 +14,7 @@ a. 下载Maven并解压
 	[root@hostname ~]# cd /opt
 	[root@hostname ~]# wget http://mirrors.hust.edu.cn/apache/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz
 	[root@hostname ~]# tar -zxvf apache-maven-3.5.2-bin.tar.gz
-	[root@hostname ~]# mv apache-maven-3.5.2-bin maven
+	[root@hostname ~]# mv apache-maven-3.5.2 maven
 ```
 
 b. 配置环境变量
