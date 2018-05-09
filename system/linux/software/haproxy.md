@@ -11,7 +11,7 @@ title: Haproxy Install
 [root@localhost opt]# tar -zxvf haproxy-1.4.21.tar.gz
 [root@localhost opt]# cd haproxy-1.4.21
 [root@localhost haproxy-1.4.21]# make TARGET=linux26 PREFIX=/usr/local/haproxy
-[root@localhost haproxy-1.4.21]# makmake install PREFIX=/usr/local/haproxy
+[root@localhost haproxy-1.4.21]# make install PREFIX=/usr/local/haproxy
 [root@localhost haproxy-1.4.21]# cp examples/haproxy.cfg /usr/local/haproxy/
 [root@localhost haproxy-1.4.21]# cd /usr/local/haproxy/
 [root@localhost haproxy]# vi haproxy.cfg

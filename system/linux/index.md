@@ -38,7 +38,7 @@ title: Linux
 - [sftp](software/sftp.html)
 - [subversion](software/subversion.html)
 - [maven](software/maven.html)
-- [jenkins](software/jenkins.thml)
+- [jenkins](software/jenkins.html)
 - [nginx](software/nginx.html)
 - [haproxy](software/haproxy.html)
 - [other](software/other.html)
