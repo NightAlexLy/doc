@@ -18,7 +18,7 @@ title: Docker
 
 
 ![Docker组件](http://www.runoob.com/wp-content/uploads/2016/04/576507-docker1.png)
-
+![Docker命令](http://www.runoob.com/docker/docker-command-manual.html)
 
 ## 安装
 
@@ -39,6 +39,46 @@ title: Docker
 
 ```
 
+## 安装redis
+
+[Docker安装redis](http://www.runoob.com/docker/docker-install-redis.html)
+
+```
+# docker search  redis
+
+runoob@runoob:~/redis$ docker search  redis
+NAME                      DESCRIPTION                   STARS  OFFICIAL  AUTOMATED
+redis                     Redis is an open source ...   2321   [OK]       
+sameersbn/redis                                         32                   [OK]
+torusware/speedus-redis   Always updated official ...   29             [OK]
+bitnami/redis             Bitnami Redis Docker Image    22                   [OK]
+anapsix/redis             11MB Redis server image ...   6                    [OK]
+webhippie/redis           Docker images for redis       4                    [OK]
+clue/redis-benchmark      A minimal docker image t...   3                    [OK]
+williamyeh/redis          Redis image for Docker        3                    [OK]
+unblibraries/redis        Leverages phusion/baseim...   2                    [OK]
+greytip/redis             redis 3.0.3                   1                    [OK]
+servivum/redis            Redis Docker Image            1                    [OK]
+
+# docker pull  redis:3.2
+
+运行镜像
+# docker run -p 6379:6379 -v $PWD/data:/data  -d redis:3.2 redis-server --appendonly yes
+
+
+查看容器运行情况
+# docker ps
+
+连接redis-client
+# docker exec -it 容器进行ID redis-cli
+
+查看镜像
+# docker images
+
+删除镜像
+# docker rmi -f IMAGE ID
+
+```
 
 ## 资料
 

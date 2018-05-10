@@ -23,7 +23,6 @@ sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
 sudo yum -y install jenkins
 ```
 #### 3.基于Tomcat安装
-　　
 　　先安装[Tomcat环境](/linux_software/tomcat.html)。         
 	官网[jenkins.war](http://mirrors.jenkins.io/war/latest/jenkins.war)         
 ```
