@@ -18,7 +18,7 @@ gulp.task("css",["clean"],function(){
 gulp.task("js",["clean"],function(){
     var stream = gulp.src(["public/**/*.js","!public/**/*.min.js"])
         .pipe(ts({
-           target: "es5",
+           target: "es6",
            allowJs: true,
            module: "commonjs",
            moduleResolution: "node"

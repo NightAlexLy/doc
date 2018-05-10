@@ -114,6 +114,7 @@ cd source
 git clone git@github.com:NightAlexLy/doc.git
 # move source
 mv doc/* .
+mv doc/.git .
 # copy gulpfile.js
 cp gulpfile.js ..
 # remove doc folder
@@ -126,4 +127,16 @@ rm -rf db.json
 hexo clean
 # hexo g
 hexo g
+# npm gulp dependency
+npm install -d --save gulp       
+npm install -d --save gulp-clean
+npm install -d --save gulp-load-plugins
+npm install -d --save gulp-minify-css
+npm install -d --save gulp-minify-html
+npm install -d --save gulp-rename gulp-uglify
+npm install -d --save gulp-shell
+npm install -d --save typescript 
+npm install -d --save gulp-typescript
+npm install -d --save gulp-htmlmin
 # touch gulp.js
+gulp
