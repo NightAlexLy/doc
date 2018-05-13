@@ -65,6 +65,9 @@ else
   make
   # make install
   make install
+  # init git config
+  git config --global user.name "luis"
+  git config --global user.email "night_ly@live.com"
   # test install
   git --version
 fi
@@ -106,21 +109,15 @@ cd ..
 mv hexo-theme-doc-seed doc
 # change folder
 cd doc
+# change website config
+sed -i 's/title: [/a-zA-Z0-9._-\ ]*/title: Rtime Doc/' _config.yaml
+sed -i 's/author: [/a-zA-Z0-9._-\ ]*/author: Luis Yang/' _config.yaml
 # remove other source file
 rm -rf source/*
-# change folder
-cd source
 # Download My doc info
-git clone git@github.com:NightAlexLy/doc.git
-# move source
-mv doc/* .
-mv doc/.git .
-# copy gulpfile.js
-cp gulpfile.js ..
-# remove doc folder
-rm -rf doc
-# change doc folder
-cd ..
+git clone git@github.com:NightAlexLy/doc.git source
+# copy gulp file js
+cp source/gulpfile.js .
 # clean cache
 rm -rf db.json
 # hexo clean 

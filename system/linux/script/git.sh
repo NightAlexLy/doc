@@ -40,6 +40,9 @@ else
   make
   # make install
   make install
+  # init git config
+  git config --global user.name "luis"
+  git config --global user.email "night_ly@live.com"
   # test install
   git --version
 fi

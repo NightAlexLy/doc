@@ -2,7 +2,7 @@
 title: Common Command
 ---
 
-# Common Command
+# Basic Command
 
 ```
 1.nohup  后台启动应用
@@ -90,4 +90,5 @@ title: Common Command
 71. export EnvName=EnvValue   设置环境变量
 72. rpm -e nodeps 应用名   rpm卸载应用   ||  rpm -e 
 73. yum remove 应用名  yum卸载应用
+74. rpm -e e2fsprogs-1.41.12-21.el6.x86_64 --nodeps  强制卸载  同72
 ```             

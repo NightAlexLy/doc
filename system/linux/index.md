@@ -42,6 +42,7 @@ title: Linux
 - [mysql](software/mysql.html)
 - [nginx](software/nginx.html)
 - [haproxy](software/haproxy.html)
+- [keepalived](software/keepalived.html)
 - [other](software/other.html)
 
 ## Issue
