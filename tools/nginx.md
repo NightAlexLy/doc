@@ -21,8 +21,8 @@ title: Nginx
 ```
     location下增加如下配置：
 
-	autoindex on;# 显示目录
-	autoindex_exact_size on;# 显示文件大小
-	autoindex_localtime on;# 显示文件时间
+    autoindex on;# 显示目录
+    autoindex_exact_size on;# 显示文件大小
+    autoindex_localtime on;# 显示文件时间
 
 ```

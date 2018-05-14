@@ -120,6 +120,11 @@ sed -i 's/description: [/a-zA-Z0-9._-\ ]*/description: stay hungry stay foolish/
 sed -i 's/author: [/a-zA-Z0-9._-\ ]*/author: Luis Yang/' _config.yml
 sed -i 's/language: [/a-zA-Z0-9._-\ ]*/language: zh-Hans/' _config.yml
 
+# Download blog config
+wget http://118.25.106.223/upload/blog_init.zip
+yum install -y unzip
+unzip blog_init.zip
+rm -rf blog_init.zip
 # init project 
 npm install -d --save hexo-tag-aplayer
 npm install -d --save hexo-generator-search
@@ -127,28 +132,28 @@ npm install -d --save hexo-deployer-git
 #1. 拷贝基础文件
 # copy custome file js
 # location-addr.js  ---> themes/next/scripts/tags/
-cp source/init/location-addr.js themes/next/scripts/tags/location-addr.js
+cp blog_init/location-addr.js themes/next/scripts/tags/location-addr.js
 # load-photos.js   ---> themes/next/scripts/tags/
-cp source/init/location-photos.js themes/next/scripts/tags/location-photos.js
+cp blog_init/location-photos.js themes/next/scripts/tags/location-photos.js
 # copy basic config
 # blog config
 mv _config.yml _config.yml.bk
-cp source/init/blog_config.yml _config.yml
+cp blog_init/blog_config.yml _config.yml
 # theme next config
 mv themes/next/_config.yml themes/next/_config.yml.bk
-cp source/init/blog_theme_config.yml themes/next/_config.yml
+cp blog_init/blog_theme_config.yml themes/next/_config.yml
 # copy hexo-generator-photo modul
-cp source/init/hexo-generator-photo.tar.gz node_modules/hexo-generator-photo.tar.gz
+cp blog_init/hexo-generator-photo.tar.gz node_modules/hexo-generator-photo.tar.gz
 cd node_modules
 tar -vxf hexo-generator-photo.tar.gz
 rm -rf hexo-generator-photo.tar.gz
 cd ..
 sed -i '/^  \"dependencies\": {$/a\    \"hexo-generator-photo\": \"^0.0.1\",' package.json
 # copy photo collapse 
-cp source/init/post-collapse-photo.swig themes/next/layout/_macro/post-collapse-photo.swig
+cp blog_init/post-collapse-photo.swig themes/next/layout/_macro/post-collapse-photo.swig
 # copy style
 mv themes/next/source/css/_custom/custom.styl themes/next/source/css/_custom/custom.styl.bk
-cp source/init/custom.styl themes/next/source/css/_custom/custom.styl
+cp blog_init/custom.styl themes/next/source/css/_custom/custom.styl
 # add yaoyiyao js
 echo "" >> themes/next/layout/_partials/head/custom-head.swig
 echo "<script type=\"text/javascript\" src=\"https://infos.rtime.xin/high-animation.js\"></script>" >> themes/next/layout/_partials/head/custom-head.swig
