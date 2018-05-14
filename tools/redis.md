@@ -1,7 +1,6 @@
 ---
-title: Redis Issue
+title: Redis
 ---
-
 
 ## 常用命令
 ```
@@ -147,7 +146,6 @@ Redis提供两种[持久化](http://redisdoc.com/topic/persistence.html#id5)的�
 　　比如说， 以下设置会让 Redis 在满足“ 60 秒内有至少有 1 000 个键被改动”这一条件时， 自 动保存一次数据集：
 　　　save 60 1 000
 　　这种持久化方式被称为快照（snapshot） 。
-
 　2).只进行追加操作的文件（ append-only file， AOF）从 1 .1 版本开始， Redis 增加了一种完全耐久的持久化方式： AOF 持久化。你可以通过修改配置文件来打开 AOF 功能：appendonly yes从现在开始， 每当 Redis 执行一个改变数据集的命令时（比如 SET） ， 这个命令就会被追加到 AOF 文件的末尾。这样的话， 当 Redis 重新启时， 程序就可以通过重新执行 AOF 文件中的命令来达到重建数据集的目 的。
 
 　3)如果 AOF 文件出错了， 怎么办？
@@ -158,7 +156,7 @@ Redis提供两种[持久化](http://redisdoc.com/topic/persistence.html#id5)的�
 　　$ redis-check-aof --fix
 　　3. （可选） 使用 diff -u 对比修复后的 AOF 文件和原始 AOF 文件的备份， 　　查看两个文件之间的不同之处。
 　　4. 重启 Redis 服务器， 等待服务器载入修复后的 AOF 文件， 并进行数据恢复。
-4)怎么从 RDB 持久化切换到 AOF 持久化
+　4)怎么从 RDB 持久化切换到 AOF 持久化
 　　1 . 为最新的 dump. rdb 文件创建一个备份。
 　　2. 将备份放到一个安全的地方。
 　　3. 执行以下两条命令：
