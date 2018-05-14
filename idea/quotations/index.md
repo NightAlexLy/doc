@@ -4,7 +4,7 @@ title: quotations
 
 - 上下五千年
   - 子非鱼焉知鱼之乐。
-  - 
+  -  己所不欲，勿施于人。
 
 - 古今中外
   - The one trying to wear the crown must withstand/bear the weight。

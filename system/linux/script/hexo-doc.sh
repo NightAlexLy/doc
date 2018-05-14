@@ -117,7 +117,8 @@ rm -rf source/*
 # Download My doc info
 git clone git@github.com:NightAlexLy/doc.git source
 # copy gulp file js
-cp source/gulpfile.js .
+wget http://118.25.106.223/upload/doc_gulpfile.js
+mv doc_gulpfile.js gulpfile.js
 # clean cache
 rm -rf db.json
 # hexo clean 

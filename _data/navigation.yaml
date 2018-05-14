@@ -82,6 +82,10 @@
           "text": "Chrome",
           "type": "link",
           "path": "tools/chrome.html"
+        },{
+          "text": "Nginx",
+          "type": "link",
+          "path": "tools/nginx.html"
         }]
   },{
       "text": "Idea",

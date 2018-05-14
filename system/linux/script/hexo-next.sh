@@ -108,7 +108,8 @@ rm -rf source/*
 # Donwload my blog doc
 git clone git@github.com:NightAlexLy/blog.git source
 # copy gulpfile.js
-cp source/gulpfile.js .
+wget http://118.25.106.223/upload/blog_gulpfile.js
+mv blog_gulpfile.js gulpfile.js
 # Download next theme source
 git clone https://github.com/iissnan/hexo-theme-next themes/next
 # change theme value
