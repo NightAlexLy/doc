@@ -84,6 +84,18 @@ journalctl -ex 查看服务启动日志
 设置
 　　Maven
 
+### Issue
+```
+QA :  Jenkins中Git Timeout错误
+解决办法：git项目配置的时候，设置git clone的时间为60分钟，避免超时。
+Solution steps:
+　　1.For resolve the problem we have to edit in Jenkins project configuration and find the "git".
+　　2.Then click on "Add" button and select "Advanced clone behaviours".
+　　3.Then in Timeout (in minutes) for clone and fetch operations box put any number which is more then 10, (I put 60 here).
+　　4.Apply and the save the configuration.
+　　5.Build Now again , It took some more time to build , but it will fixed this error.
+```
+
 ### 资料
 
 - [jenkins安装包](http://pkg.jenkins-ci.org/redhat/)

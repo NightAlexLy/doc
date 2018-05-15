@@ -90,6 +90,10 @@
           "text": "Redis",
           "type": "link",
           "path": "tools/redis.html"
+        },{
+          "text": "Hexo",
+          "type": "link",
+          "path": "tools/hexo.html"
         }]
   },{
       "text": "Idea",
