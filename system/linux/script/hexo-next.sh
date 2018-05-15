@@ -122,6 +122,7 @@ sed -i 's/language: [/a-zA-Z0-9._-\ ]*/language: zh-Hans/' _config.yml
 
 # Download blog config
 wget http://118.25.106.223/upload/blog_init.zip
+yum install -y expect
 yum install -y unzip
 unzip blog_init.zip
 rm -rf blog_init.zip

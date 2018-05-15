@@ -19,6 +19,21 @@ npm
   npm ls
   查看版本
   npm --version
+
+  查看配置
+  npm config list
+
+  获取配置
+  npm config get prefix
+
+  设置配置
+  npm config set prefix "directory"
+
+  删除配置
+  npm config delete prefix
+
+  npm帮助
+  npm --help
 ```
 [Node.js中npm常用命令大全](http://www.jb51.net/article/86253.htm)
 

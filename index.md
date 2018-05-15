@@ -16,7 +16,8 @@ title: my Doc
 - 2018-02-27 重新整理doc目录结构
 - 2018-03-04 添加MyMac常用软件
 - 2018-03-30 添加[Java1.7](language/java/index.html#JDK1-7-新特性)新特性介绍
-
+- 2018-04-xx 添加中间件的安装脚本
+- 2018-05-13 添加Nginx/Redis/Hexo/Mysql章节
 
 ** 未完成的事件 **
 
@@ -45,10 +46,10 @@ title: my Doc
   - sftp ( √ )
   - subversion ( √ )
   - maven ( √ )
-- linux shell 编写(语法)
+- linux shell 编写( √ )
 - 架构图
 - 技术进阶
 - java util
-- shell 汇总 ( 再做 )
+- shell 汇总 ( √ )
 - lable
-- 添加install software的脚本文件
+- 添加install software的脚本文件 ( √ )

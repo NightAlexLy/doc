@@ -45,6 +45,10 @@ title: Linux
 - [keepalived](software/keepalived.html)
 - [other](software/other.html)
 
+## Article
+
+- [Linux开机自启动](article/startup.html)
+
 ## Issue
 
 ### Crontab执行时效

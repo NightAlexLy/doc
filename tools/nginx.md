@@ -41,6 +41,17 @@ sudo /etc/init.d/nginxd reload
 kill -HUP `cat /usr/local/nginx/logs/nginx.pid `
 ```
 
+## alias
+```
+location ^~ /MA/ {        
+    alias  /Users/web;
+}
+
+当我同样浏览器访问  /MA/index.html
+使用root 会映射为/Users/web/MA/index.html 
+使用alias 会直接映射 /User/web/index.html 
+```
+
 ## 负载均衡策略
 ```
 1、轮询（默认）
@@ -294,6 +305,110 @@ echo -e '\E[33m' "All request number:" ${resettem} ${Http_Code[3]}
 
 Check_http_status
 Check_http_code
+```
+
+## 使用Nginx+Tomcat访问本地目录
+```
+#user  nobody;
+worker_processes  1;
+
+#error_log  logs/error.log;
+#error_log  logs/error.log  notice;
+#error_log  logs/error.log  info;
+#pid        logs/nginx.pid;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+     # 1.以下是第一处修改，配置项目名称和Tomcat的访问地址，
+    upstream portal {
+        ip_hash;
+        #sticky;
+        server 127.0.0.1:8080 max_fails=2 fail_timeout=30s;
+    }
+    # 以上是第一处修改。
+
+    #log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+    #                  '$status $body_bytes_sent "$http_referer" '
+    #                  '"$http_user_agent" "$http_x_forwarded_for"';
+
+    #access_log  logs/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    #keepalive_timeout  0;
+    keepalive_timeout  65;
+
+    #gzip  on;
+
+    server {
+        listen       80;
+        server_name  localhost;
+
+        # 2.以下是第二处修改 ，配置项目首页的访问地址为http://localhost/portal ，即nginx映射后的访问地址。
+        location /portal {
+            proxy_pass http://portal;
+        # 以上是第二处修改   
+
+            #后端的Web服务器可以通过X-Forwarded-For获取用户真实IP
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+            #以下是一些反向代理的配置，可选。
+            proxy_set_header Host $host;
+
+            #nginx跟后端服务器连接超时时间(代理连接超时)
+            proxy_connect_timeout 3000; 
+
+            #后端服务器数据回传时间(代理发送超时)
+            proxy_send_timeout 3000; 
+
+            #连接成功后，后端服务器响应时间(代理接收超时)
+            proxy_read_timeout 3000; 
+
+            #设置代理服务器（nginx）保存用户头信息的缓冲区大小
+            proxy_buffer_size 4k; 
+
+            #proxy_buffers缓冲区，网页平均在32k以下的设置
+            proxy_buffers 4 32k; 
+
+            #高负荷下缓冲大小（proxy_buffers*2）
+            proxy_busy_buffers_size 64k; 
+
+            #设定缓存文件夹大小，大于这个值，将从upstream服务器传
+            proxy_temp_file_write_size 64k;
+        }
+        # 3.前2步已经准备完毕，以下是第三处修改，配置本地图片路径信息（本篇重点）
+        location /portal/file/ { #b.配置本地图片路径（图片存在d盘：portal/file文件夹下，注意前后的“/”不可省略），完整访问地址为第http://localhost/portal/file/xxxxx.jpg
+
+            root d:/;   #a.设置nginx根目录为d盘。
+        }
+        # 以上是第三处修改 
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+
+}
 ```
 
 ## 资料
