@@ -69,15 +69,11 @@ servivum/redis            Redis Docker Image            1                    [OK
 查看容器运行情况
 # docker ps
 
-停止容器服务
-#docker kill -s KILL mynginx
-
 连接redis-client
 # docker exec -it 容器进行ID redis-cli
 
 查看镜像
-# docker images ls
-
+# docker images
 
 删除镜像
 # docker rmi -f IMAGE ID
@@ -89,5 +85,3 @@ servivum/redis            Redis Docker Image            1                    [OK
 - [Docker 入门教程](http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html)
 - [Docker 微服务教程](http://www.ruanyifeng.com/blog/2018/02/docker-wordpress-tutorial.html)
 - [CentOS Docker 安装](http://www.runoob.com/docker/centos-docker-install.html)
-- [Docker命令](http://www.runoob.com/docker/docker-command-manual.html)
-
