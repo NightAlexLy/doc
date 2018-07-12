@@ -2,7 +2,7 @@
 title: Common Command
 ---
 
-### Command 1
+### Command 1           
 
 ```
 1.nohup  后台启动应用
@@ -91,9 +91,9 @@ title: Common Command
 72. rpm -e nodeps 应用名   rpm卸载应用   ||  rpm -e 
 73. yum remove 应用名  yum卸载应用
 74. rpm -e e2fsprogs-1.41.12-21.el6.x86_64 --nodeps  强制卸载  同72
-```             
-
-### Command 2
+```
+            
+### Command 2              
 
 ```
 1.检查远程端口是否对bash开放：
@@ -318,5 +318,6 @@ find . -type f -exec egrep -l $'\t' {} \;
 
 73.用”=”打印出横线:全选复制放进笔记
 printf '%100s\n' | tr ' ' =
+```
 
-``` 
+
