@@ -18,6 +18,7 @@ title: my Doc
 - 2018-03-30 添加[Java1.7](language/java/index.html#JDK1-7-新特性)新特性介绍
 - 2018-04-xx 添加中间件的安装脚本
 - 2018-05-13 添加Nginx/Redis/Hexo/Mysql章节
+- 2018-07-24 添加"得到"学习笔记
 
 ** 未完成的事件 **
 

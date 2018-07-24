@@ -242,3 +242,16 @@ title: Git Command
   make prefix=/usr install install-doc install-html install-info ;# as root  
 
 ```
+
+### git 回滚提交内容
+
+```
+  先通过  git log  查找要回退的 节点（commit_hash)
+
+
+  git reset --hard commit_hash
+
+  git push origin HEAD --force
+
+
+```
