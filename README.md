@@ -1,3 +1,3 @@
 **MyDoc**
 
-[http://doc.rtime.xin/](http://doc.rtime.xin/)
+[http://doc.wswzms.top/](http://doc.wswzms.top/)
